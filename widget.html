@@ -1,0 +1,321 @@
+<h2 class="sr-only">Interactive mortgage calculator: adjust price, down payment, rate, term and mortgage insurance to see the monthly payment, its breakdown, and an amortization chart.</h2>
+
+<style>
+.mc-card{background:var(--surface-2);border:0.5px solid var(--border);border-radius:12px;padding:1rem 1.25rem}
+.mc-tile{background:var(--surface-1);border-radius:var(--radius);padding:12px}
+.mc-lbl{font-size:13px;color:var(--text-secondary)}
+.mc-mut{font-size:12px;color:var(--text-muted)}
+.mc-num{font-variant-numeric:tabular-nums}
+.mc-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.mc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.mc-seg{display:flex;gap:6px;flex-wrap:wrap}
+.mc-seg button{flex:1;min-width:64px;padding:7px 4px;font-size:13px;border-radius:var(--radius)}
+.mc-seg button[aria-pressed=true]{background:var(--bg-accent);color:var(--text-accent);border-color:var(--border-accent)}
+.mc-out{font-size:14px;font-weight:500;min-width:74px;text-align:right}
+.mc-dot{width:9px;height:9px;border-radius:3px;flex:none}
+.mc-leg{display:flex;align-items:center;gap:7px;font-size:12.5px;margin-bottom:5px}
+.mc-tip{position:absolute;pointer-events:none;opacity:0;background:var(--surface-2);border:0.5px solid var(--border);
+  border-radius:var(--radius);padding:8px 10px;font-size:12px;min-width:132px;transform:translate(-50%,-108%);transition:opacity .15s;z-index:3}
+</style>
+
+<div style="margin-bottom:1rem">
+  <div class="mc-mut" style="letter-spacing:.06em;text-transform:uppercase">Total monthly payment</div>
+  <div id="mcHero" class="mc-num" style="font-size:32px;font-weight:500;line-height:1.15;margin-top:2px">$0</div>
+  <div id="mcHeroSub" class="mc-lbl" style="margin-top:2px"></div>
+</div>
+
+<div style="display:flex;gap:14px;align-items:center;margin-bottom:1.25rem">
+  <div style="position:relative;flex:none">
+    <svg id="mcDonut" viewBox="0 0 132 132" style="width:132px;height:132px;display:block"></svg>
+  </div>
+  <div id="mcLegend" style="flex:1;min-width:0"></div>
+</div>
+
+<div class="mc-card" style="margin-bottom:1rem">
+  <div class="mc-row"><span class="mc-lbl" style="width:74px">Price</span><input type="range" id="mcPrice" min="50000" max="1500000" step="5000" value="450000" style="flex:1"><span class="mc-out mc-num" id="mcPriceO"></span></div>
+  <div class="mc-row"><span class="mc-lbl" style="width:74px">Down</span><input type="range" id="mcDown" min="0" max="50" step="0.5" value="20" style="flex:1"><span class="mc-out mc-num" id="mcDownO"></span></div>
+  <div class="mc-row"><span class="mc-lbl" style="width:74px">Rate</span><input type="range" id="mcRate" min="1" max="12" step="0.05" value="6.5" style="flex:1"><span class="mc-out mc-num" id="mcRateO"></span></div>
+  <div class="mc-row" style="margin-bottom:12px"><span class="mc-lbl" style="width:74px">Extra/mo</span><input type="range" id="mcExtra" min="0" max="2000" step="25" value="0" style="flex:1"><span class="mc-out mc-num" id="mcExtraO"></span></div>
+
+  <div class="mc-lbl" style="margin-bottom:6px">Term</div>
+  <div class="mc-seg" id="mcTerm" style="margin-bottom:12px">
+    <button type="button" data-v="30" aria-pressed="true">30 yr</button>
+    <button type="button" data-v="20" aria-pressed="false">20 yr</button>
+    <button type="button" data-v="15" aria-pressed="false">15 yr</button>
+  </div>
+
+  <div class="mc-grid">
+    <div>
+      <div class="mc-lbl" style="margin-bottom:5px">Mortgage insurance</div>
+      <select id="mcMi" style="width:100%">
+        <option value="auto" selected>Auto (by LTV)</option>
+        <option value="pmi">PMI</option>
+        <option value="fha">FHA MIP</option>
+        <option value="none">None</option>
+      </select>
+    </div>
+    <div id="mcRateWrap">
+      <div class="mc-lbl" style="margin-bottom:5px" id="mcMiRateLbl">PMI rate %/yr</div>
+      <input type="number" id="mcMiRate" value="0.55" min="0" max="3" step="0.05" style="width:100%">
+    </div>
+    <div id="mcCutWrap">
+      <div class="mc-lbl" style="margin-bottom:5px">Cancel at LTV %</div>
+      <input type="number" id="mcCut" value="80" min="50" max="100" step="1" style="width:100%">
+    </div>
+    <div id="mcDurWrap" style="display:none">
+      <div class="mc-lbl" style="margin-bottom:5px">MIP duration</div>
+      <select id="mcDur" style="width:100%">
+        <option value="11">11 years</option>
+        <option value="99" selected>Life of loan</option>
+      </select>
+    </div>
+  </div>
+  <div class="mc-grid" style="margin-top:12px">
+    <div><div class="mc-lbl" style="margin-bottom:5px">Tax $/yr</div><input type="number" id="mcTax" value="5400" min="0" step="100" style="width:100%"></div>
+    <div><div class="mc-lbl" style="margin-bottom:5px">Insurance $/yr</div><input type="number" id="mcIns" value="1800" min="0" step="100" style="width:100%"></div>
+  </div>
+</div>
+
+<div class="mc-grid" style="margin-bottom:1.25rem">
+  <div class="mc-tile"><div class="mc-mut">Loan amount</div><div class="mc-num" id="mcLoan" style="font-size:22px;font-weight:500"></div><div class="mc-mut mc-num" id="mcLoanD"></div></div>
+  <div class="mc-tile"><div class="mc-mut">Total interest</div><div class="mc-num" id="mcInt" style="font-size:22px;font-weight:500"></div><div class="mc-mut mc-num" id="mcIntD"></div></div>
+  <div class="mc-tile"><div class="mc-mut">Mortgage insurance</div><div class="mc-num" id="mcMiT" style="font-size:22px;font-weight:500"></div><div class="mc-mut mc-num" id="mcMiD"></div></div>
+  <div class="mc-tile"><div class="mc-mut">Payoff</div><div class="mc-num" id="mcPay" style="font-size:22px;font-weight:500"></div><div class="mc-mut mc-num" id="mcPayD"></div></div>
+</div>
+
+<div class="mc-seg" id="mcTabs" style="margin-bottom:10px">
+  <button type="button" data-v="balance" aria-pressed="true">Balance</button>
+  <button type="button" data-v="split" aria-pressed="false">Yearly split</button>
+  <button type="button" data-v="cum" aria-pressed="false">Cumulative</button>
+</div>
+<div id="mcChartLeg" style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:4px"></div>
+<div id="mcBox" style="position:relative;margin-bottom:1rem">
+  <svg id="mcChart" preserveAspectRatio="none" style="width:100%;display:block"></svg>
+  <div class="mc-tip" id="mcTip"></div>
+</div>
+
+<p id="mcNote" class="mc-lbl" style="margin:0 0 1rem"></p>
+
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+  <button type="button" id="mcAsk1" style="flex:1;min-width:150px">Print the schedule ↗</button>
+  <button type="button" id="mcAsk2" style="flex:1;min-width:150px">Compare 15 vs 30 yr ↗</button>
+</div>
+
+<script>
+(function(){
+const $=s=>document.getElementById(s);
+const C={s1:'#378ADD',s2:'#D85A30',s3:'#1D9E75',s4:'#BA7517',s5:'#D4537E'};
+const V=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim()||'#888';
+const usd0=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});
+const money=n=>usd0.format(Math.round(n||0));
+const compact=n=>{n=Math.round(n||0);return Math.abs(n)>=1e6?'$'+(n/1e6).toFixed(n%1e6?1:0)+'M':Math.abs(n)>=1e4?'$'+Math.round(n/1e3)+'K':usd0.format(n);};
+const S={price:450000,downPct:20,rate:6.5,years:30,extra:0,mi:'auto',miRate:0.55,cut:80,mipUp:1.75,dur:99,tax:5400,ins:1800,tab:'balance'};
+
+function eff(){return S.mi==='auto'?(100-S.downPct>80?'pmi':'none'):S.mi;}
+function build(withExtra){
+  const kind=eff(),price=S.price,base=Math.max(0,price-price*S.downPct/100);
+  const upfront=kind==='fha'?base*S.mipUp/100:0, loan=base+upfront;
+  const r=S.rate/1200,n=S.years*12;
+  const pmt=r?loan*r/(1-Math.pow(1+r,-n)):loan/n, extra=withExtra?S.extra:0;
+  const rows=[];let bal=loan,cP=0,cI=0,cM=0,miMonths=0,miEnd=null;
+  for(let m=1;m<=n&&bal>0.005;m++){
+    const it=bal*r;let pr=Math.max(0,pmt-it+extra);if(pr>bal)pr=bal;
+    let mi=0;
+    if(kind==='pmi'){ if(price>0&&bal/price*100>S.cut) mi=loan*(S.miRate/100)/12; else if(miEnd===null) miEnd=m; }
+    else if(kind==='fha'){ if(m<=S.dur*12) mi=bal*(S.miRate/100)/12; else if(miEnd===null) miEnd=m; }
+    if(mi>0)miMonths++;
+    bal-=pr;if(bal<0.005)bal=0;
+    cP+=pr;cI+=it;cM+=mi;
+    rows.push({m,principal:pr,interest:it,mi,bal,cP,cI,cM});
+    if(bal===0)break;
+  }
+  const years=[];
+  for(let i=0;i<rows.length;i+=12){const c=rows.slice(i,i+12),l=c[c.length-1];
+    years.push({y:i/12+1,principal:c.reduce((a,b)=>a+b.principal,0),interest:c.reduce((a,b)=>a+b.interest,0),mi:c.reduce((a,b)=>a+b.mi,0),bal:l.bal});}
+  return {kind,loan,upfront,pmt,extra,rows,years,n:rows.length,totalI:cI,totalM:cM,miMonths,miEnd,down:price*S.downPct/100};
+}
+
+/* ---- donut ---- */
+function parts(D){
+  return [{n:'Principal & interest',v:D.pmt+D.extra,c:C.s1},
+          {n:'Property tax',v:S.tax/12,c:C.s2},
+          {n:'Home insurance',v:S.ins/12,c:C.s3},
+          {n:D.kind==='fha'?'FHA MIP':'PMI',v:D.rows[0]?D.rows[0].mi:0,c:C.s5}].filter(p=>p.v>0.5);
+}
+function donut(D){
+  const svg=$('mcDonut'),P=parts(D),tot=P.reduce((a,b)=>a+b.v,0)||1;
+  const cx=66,cy=66,r=46,sw=19,CC=2*Math.PI*r,gap=P.length>1?4:0;
+  let h='<circle cx="66" cy="66" r="46" fill="none" stroke="'+V('--border-strong')+'" stroke-width="'+sw+'"/><g transform="rotate(-90 66 66)">';
+  let acc=0;
+  P.forEach(p=>{const f=p.v/tot,len=Math.max(0,CC*f-gap);
+    h+='<circle cx="66" cy="66" r="46" fill="none" stroke="'+p.c+'" stroke-width="'+sw+'" stroke-dasharray="'+len.toFixed(1)+' '+(CC-len).toFixed(1)+'" stroke-dashoffset="'+(-CC*acc).toFixed(1)+'" style="transition:stroke-dasharray .5s cubic-bezier(.2,.8,.3,1),stroke-dashoffset .5s cubic-bezier(.2,.8,.3,1)"/>';
+    acc+=f;});
+  h+='</g><text x="66" y="63" text-anchor="middle" font-size="9.5" letter-spacing=".06em" fill="'+V('--text-muted')+'">MONTHLY</text>';
+  h+='<text x="66" y="80" text-anchor="middle" font-size="16" font-weight="500" fill="'+V('--text-primary')+'">'+compact(tot)+'</text>';
+  svg.innerHTML=h;
+  $('mcLegend').innerHTML=P.map(p=>'<div class="mc-leg"><span class="mc-dot" style="background:'+p.c+'"></span><span style="flex:1;color:var(--text-secondary)">'+p.n+'</span><span class="mc-num" style="font-weight:500">'+money(p.v)+'</span></div>').join('');
+  return tot;
+}
+
+/* ---- chart ---- */
+let W=356,H=210,PL=44,PR=14,PT=10,PB=24,IW=W-PL-PR,IH=H-PT-PB;
+function nice(v){if(v<=0)return 1;const p=Math.pow(10,Math.floor(Math.log10(v))),s=v/p;
+  return (s<=1?1:s<=1.5?1.5:s<=2?2:s<=2.5?2.5:s<=3?3:s<=4?4:s<=4.5?4.5:s<=5?5:s<=7.5?7.5:10)*p;}
+function chart(D,Db){
+  const box=$('mcBox'),svg=$('mcChart');
+  W=Math.max(280,Math.round(box.clientWidth||356));H=Math.round(W*0.6);H=Math.max(190,Math.min(240,H));
+  IW=W-PL-PR;IH=H-PT-PB;
+  svg.setAttribute('viewBox','0 0 '+W+' '+H);svg.style.height=H+'px';
+  const g=V('--border'),tk=V('--text-muted'),sf=V('--surface-2');
+  let h='',leg=[];
+  const nY=D.years.length;
+  const xstep=nY<=15?5:10;
+  const axis=(yMax,total)=>{let s='';
+    for(let i=0;i<=4;i++){const y=(PT+IH-IH*i/4).toFixed(1);
+      s+='<line x1="'+PL+'" x2="'+(PL+IW)+'" y1="'+y+'" y2="'+y+'" stroke="'+g+'" stroke-width="1"/>';
+      s+='<text x="'+(PL-6)+'" y="'+(+y+4)+'" text-anchor="end" font-size="10" fill="'+tk+'">'+compact(yMax*i/4)+'</text>';}
+    for(let y=0;y<=total;y+=xstep){const x=PL+IW*y/total;
+      const an=x<PL+10?'start':x>PL+IW-12?'end':'middle';
+      s+='<text x="'+x.toFixed(1)+'" y="'+(H-PB+16)+'" text-anchor="'+an+'" font-size="10" fill="'+tk+'">'+(y?'Yr '+y:'Now')+'</text>';}
+    return s;};
+
+  if(S.tab==='balance'){
+    const tY=Math.max(nY,Db.years.length),yMax=nice(D.loan),Y=v=>PT+IH-IH*(v/yMax),X=(i,len,span)=>PL+IW*(i/(len-1))*(span/tY);
+    h+=axis(yMax,tY);
+    leg=[['Remaining balance',C.s1]];
+    if(D.extra>0){
+      leg=[['With extra payments',C.s1],['Original schedule',C.s2]];
+      const b=Db.rows,d=b.map((r,i)=>(i?'L':'M')+X(i,b.length,Db.n/12).toFixed(1)+','+Y(r.bal).toFixed(1)).join(' ');
+      h+='<path d="'+d+'" fill="none" stroke="'+C.s2+'" stroke-width="2" stroke-dasharray="5 4"/>';
+    }
+    const a=D.rows,pth=a.map((r,i)=>(i?'L':'M')+X(i,a.length,D.n/12).toFixed(1)+','+Y(r.bal).toFixed(1)).join(' ');
+    h+='<path d="'+pth+' L'+X(a.length-1,a.length,D.n/12).toFixed(1)+','+Y(0)+' L'+PL+','+Y(0)+' Z" fill="'+C.s1+'" opacity=".12"/>';
+    h+='<path d="'+pth+'" fill="none" stroke="'+C.s1+'" stroke-width="2" stroke-linejoin="round"/>';
+    if(D.miEnd&&D.miEnd<D.n){const x=X(D.miEnd-1,a.length,D.n/12);
+      h+='<line x1="'+x.toFixed(1)+'" x2="'+x.toFixed(1)+'" y1="'+PT+'" y2="'+(PT+IH)+'" stroke="'+C.s5+'" stroke-width="1" stroke-dasharray="3 3"/>';
+      h+='<circle cx="'+x.toFixed(1)+'" cy="'+Y(a[D.miEnd-1].bal).toFixed(1)+'" r="4" fill="'+C.s5+'" stroke="'+sf+'" stroke-width="2"/>';
+      h+='<text x="'+Math.min(x+6,PL+IW-4).toFixed(1)+'" y="'+(PT+11)+'" font-size="10.5" font-weight="500" fill="'+V('--text-secondary')+'" text-anchor="'+(x>PL+IW*0.62?'end':'start')+'">'+(D.kind==='fha'?'MIP ends':'PMI ends')+'</text>';}
+    hover=i=>{const r=D.rows[i];return{t:'Year '+Math.ceil(r.m/12)+' · mo '+r.m,
+      rows:[[C.s1,'Balance',money(r.bal)],[C.s3,'Principal paid',money(r.cP)],[C.s2,'Interest paid',money(r.cI)]],
+      x:X(i,D.rows.length,D.n/12),y:Y(r.bal)};};
+    hoverN=D.rows.length;
+  } else if(S.tab==='split'){
+    const yMax=nice(Math.max.apply(null,D.years.map(y=>y.principal+y.interest+y.mi))),Y=v=>PT+IH-IH*(v/yMax);
+    h+=axis(yMax,nY);
+    leg=[['Principal',C.s1],['Interest',C.s2]];if(D.totalM>0)leg.push([D.kind==='fha'?'FHA MIP':'PMI',C.s5]);
+    const band=IW/nY,bw=Math.min(14,band*0.72);
+    D.years.forEach((y,i)=>{const x=PL+band*i+(band-bw)/2;let acc=0;
+      const segs=[[y.principal,C.s1],[y.interest,C.s2],[y.mi,C.s5]].filter(s=>s[0]>0);
+      segs.forEach((s,si)=>{const y0=Y(acc+s[0]),y1=Y(acc),top=si===segs.length-1;
+        const ht=Math.max(0,y1-y0-(top?0:2));
+        h+='<rect x="'+x.toFixed(1)+'" y="'+y0.toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+ht.toFixed(1)+'" fill="'+s[1]+'"'+(top?' rx="2"':'')+'/>';
+        acc+=s[0];});});
+    hover=i=>{const y=D.years[i];const rows=[[C.s1,'Principal',money(y.principal)],[C.s2,'Interest',money(y.interest)]];
+      if(y.mi>0)rows.push([C.s5,D.kind==='fha'?'MIP':'PMI',money(y.mi)]);
+      rows.push([null,'Balance',money(y.bal)]);
+      return{t:'Year '+y.y,rows,x:PL+band*i+band/2,y:Y(y.principal+y.interest+y.mi)};};
+    hoverN=nY;
+  } else {
+    const yMax=nice(D.loan+D.totalI+D.totalM),Y=v=>PT+IH-IH*(v/yMax),a=D.rows,X=i=>PL+IW*(i/(a.length-1));
+    h+=axis(yMax,nY);
+    leg=[['Cumulative principal',C.s1],['Cumulative interest',C.s2]];if(D.totalM>0)leg.push([D.kind==='fha'?'MIP':'PMI',C.s5]);
+    const band=(top,bot)=>{let d=top.map((v,i)=>(i?'L':'M')+X(i).toFixed(1)+','+Y(v).toFixed(1)).join(' ');
+      for(let i=bot.length-1;i>=0;i--)d+=' L'+X(i).toFixed(1)+','+Y(bot[i]).toFixed(1);return d+' Z';};
+    const P=a.map(r=>r.cP),I=a.map(r=>r.cP+r.cI),M=a.map(r=>r.cP+r.cI+r.cM),Z=a.map(()=>0);
+    h+='<path d="'+band(M,I)+'" fill="'+C.s5+'"/><path d="'+band(I,P)+'" fill="'+C.s2+'"/><path d="'+band(P,Z)+'" fill="'+C.s1+'"/>';
+    h+='<path d="'+P.map((v,i)=>(i?'L':'M')+X(i).toFixed(1)+','+Y(v).toFixed(1)).join(' ')+'" fill="none" stroke="'+sf+'" stroke-width="2"/>';
+    h+='<path d="'+I.map((v,i)=>(i?'L':'M')+X(i).toFixed(1)+','+Y(v).toFixed(1)).join(' ')+'" fill="none" stroke="'+sf+'" stroke-width="2"/>';
+    hover=i=>{const r=a[i];const rows=[[C.s1,'Principal paid',money(r.cP)],[C.s2,'Interest paid',money(r.cI)]];
+      if(r.cM>0)rows.push([C.s5,'Insurance paid',money(r.cM)]);
+      rows.push([null,'Total paid',money(r.cP+r.cI+r.cM)]);
+      return{t:'Year '+Math.ceil(r.m/12)+' · mo '+r.m,rows,x:X(i),y:Y(r.cP+r.cI+r.cM)};};
+    hoverN=a.length;
+  }
+  h+='<rect id="mcHit" x="'+PL+'" y="'+PT+'" width="'+IW+'" height="'+IH+'" fill="transparent"/>';
+  h+='<g id="mcXh" opacity="0"><line y1="'+PT+'" y2="'+(PT+IH)+'" stroke="'+V('--text-muted')+'" stroke-width="1"/><circle r="4" fill="'+V('--text-primary')+'" stroke="'+sf+'" stroke-width="2"/></g>';
+  svg.innerHTML=h;
+  $('mcChartLeg').innerHTML=leg.map(l=>'<span style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-secondary)"><span class="mc-dot" style="background:'+l[1]+'"></span>'+l[0]+'</span>').join('');
+  bindHover();
+}
+let hover=null,hoverN=0;
+function bindHover(){
+  const svg=$('mcChart'),hit=$('mcHit'),xh=$('mcXh'),tip=$('mcTip'),box=$('mcBox');
+  if(!hit)return;
+  const move=e=>{
+    const b=svg.getBoundingClientRect(),cx=(e.touches?e.touches[0].clientX:e.clientX);
+    let i=Math.round(((cx-b.left)/b.width*W-PL)/IW*(hoverN-1));
+    i=Math.max(0,Math.min(hoverN-1,i));
+    const d=hover(i);
+    xh.setAttribute('opacity','1');
+    xh.querySelector('line').setAttribute('x1',d.x);xh.querySelector('line').setAttribute('x2',d.x);
+    xh.querySelector('circle').setAttribute('cx',d.x);xh.querySelector('circle').setAttribute('cy',d.y);
+    tip.innerHTML='<div style="font-weight:500;margin-bottom:4px">'+d.t+'</div>'+d.rows.map(r=>
+      '<div style="display:flex;justify-content:space-between;gap:10px;color:var(--text-secondary)"><span>'+(r[0]?'<span class="mc-dot" style="display:inline-block;background:'+r[0]+';margin-right:5px"></span>':'')+r[1]+'</span><span class="mc-num" style="color:var(--text-primary);font-weight:500">'+r[2]+'</span></div>').join('');
+    const px=d.x/W*b.width,py=d.y/H*b.height;
+    tip.style.left=Math.max(70,Math.min(b.width-70,px))+'px';
+    tip.style.top=Math.max(tip.offsetHeight+4,py)+'px';
+    tip.style.opacity='1';
+    if(e.cancelable&&e.touches)e.preventDefault();
+  };
+  ['pointermove','pointerdown','touchmove','touchstart'].forEach(t=>hit.addEventListener(t,move,{passive:false}));
+  ['pointerleave','touchend'].forEach(t=>hit.addEventListener(t,()=>{xh.setAttribute('opacity','0');tip.style.opacity='0';}));
+}
+
+/* ---- render ---- */
+function render(){
+  const D=build(true),Db=S.extra>0?build(false):D;
+  const tot=donut(D);
+  $('mcHero').textContent=money(tot);
+  const miL=D.kind==='fha'?'FHA MIP':D.kind==='pmi'?'PMI':null;
+  $('mcHeroSub').textContent=money(D.pmt)+' principal & interest'+(D.extra>0?' + '+money(D.extra)+' extra':'')+
+    (miL&&D.rows[0].mi>0?' + '+money(D.rows[0].mi)+' '+miL:'')+' + '+money(S.tax/12+S.ins/12)+' tax & insurance';
+  $('mcLoan').textContent=compact(D.loan);
+  $('mcLoanD').textContent=money(D.down)+' down · '+Math.round(100-S.downPct)+'% LTV';
+  $('mcInt').textContent=compact(D.totalI);
+  const saved=Db.totalI-D.totalI;
+  $('mcIntD').textContent=saved>1?money(saved)+' saved':Math.round(D.totalI/D.loan*100)+'% of the loan';
+  $('mcMiT').textContent=D.totalM>0?compact(D.totalM):'$0';
+  $('mcMiD').textContent=D.totalM>0?miL+' for '+(D.miMonths/12).toFixed(1)+' yrs':(S.downPct>=20?'Not required':'Off');
+  const yy=Math.floor(D.n/12),mm=D.n%12;
+  $('mcPay').textContent=yy+' yr'+(mm?' '+mm+' mo':'');
+  const sm=Db.n-D.n;
+  $('mcPayD').textContent=sm>0?Math.floor(sm/12)+' yr '+sm%12+' mo earlier':money(D.loan+D.totalI+D.totalM)+' paid total';
+  chart(D,Db);
+  let t;
+  if(D.kind==='pmi'&&D.miEnd) t='PMI applies above '+S.cut+'% LTV and drops off in month '+D.miEnd+' (year '+Math.ceil(D.miEnd/12)+') — about '+money(D.totalM)+' paid. Most lenders need a written request at that point; automatic termination usually comes later, at 78% LTV.';
+  else if(D.kind==='pmi') t='PMI runs the whole schedule here — the balance never reaches '+S.cut+'% LTV. Total: '+money(D.totalM)+'.';
+  else if(D.kind==='fha') t='Upfront MIP of '+money(D.upfront)+' is financed into the loan, plus the annual premium — '+money(D.totalM)+' over the schedule. FHA premium rates change periodically, so verify current figures with a lender.';
+  else t='No mortgage insurance. Interest alone adds '+money(D.totalI)+' — '+Math.round(D.totalI/D.loan*100)+'% on top of what you borrow.';
+  if(D.extra>0&&sm>0) t+=' Paying '+money(D.extra)+' extra monthly clears it '+Math.floor(sm/12)+' yr '+sm%12+' mo early and saves '+money(saved)+'.';
+  $('mcNote').textContent=t;
+}
+function syncLabels(){
+  $('mcPriceO').textContent=compact(S.price);
+  $('mcDownO').textContent=S.downPct.toFixed(1).replace('.0','')+'% · '+compact(S.price*S.downPct/100);
+  $('mcRateO').textContent=S.rate.toFixed(2)+'%';
+  $('mcExtraO').textContent=S.extra?money(S.extra):'none';
+  const e=eff();
+  $('mcRateWrap').style.display=e==='none'?'none':'';
+  $('mcCutWrap').style.display=e==='pmi'?'':'none';
+  $('mcDurWrap').style.display=e==='fha'?'':'none';
+  $('mcMiRateLbl').textContent=e==='fha'?'Annual MIP %/yr':'PMI rate %/yr';
+}
+[['mcPrice','price'],['mcDown','downPct'],['mcRate','rate'],['mcExtra','extra']].forEach(([id,k])=>{
+  $(id).addEventListener('input',e=>{S[k]=parseFloat(e.target.value);syncLabels();render();});
+});
+[['mcMiRate','miRate'],['mcCut','cut'],['mcTax','tax'],['mcIns','ins']].forEach(([id,k])=>{
+  $(id).addEventListener('input',e=>{const v=parseFloat(e.target.value);if(!isNaN(v)){S[k]=Math.max(0,v);render();}});
+});
+$('mcMi').addEventListener('change',e=>{S.mi=e.target.value;S.miRate=e.target.value==='fha'?0.55:0.55;syncLabels();render();});
+$('mcDur').addEventListener('change',e=>{S.dur=parseFloat(e.target.value);render();});
+[['mcTerm',v=>{S.years=+v;}],['mcTabs',v=>{S.tab=v;}]].forEach(([id,fn])=>{
+  const seg=$(id);seg.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
+    seg.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+    fn(b.dataset.v);render();}));
+});
+$('mcAsk1').addEventListener('click',()=>sendPrompt('Print the year-by-year amortization schedule for a $'+Math.round(S.price).toLocaleString('en-US')+' home, '+S.downPct+'% down, '+S.rate+'% over '+S.years+' years'+(S.extra?' with $'+S.extra+'/mo extra principal':'')+'.'));
+$('mcAsk2').addEventListener('click',()=>sendPrompt('Compare a 15-year vs 30-year mortgage at '+S.rate+'% for a $'+Math.round(S.price).toLocaleString('en-US')+' home with '+S.downPct+'% down — total interest, monthly payment, and break-even.'));
+window.addEventListener('resize',()=>render());
+syncLabels();render();
+})();
+</script>

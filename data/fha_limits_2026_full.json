@@ -1,0 +1,5024 @@
+{
+ "_meta": {
+  "year": 2026,
+  "source": "HUD CY2026 FHA forward mortgage limits: https://apps.hud.gov/pub/chums/cy2026-forward-limits.txt",
+  "naming_convention": "County keys are the OFFICIAL name exactly as published in the source file (FHFA CSV spelling, which is upper-case for counties/parishes/boroughs and mixed-case for Connecticut planning regions). No renaming or case-folding is applied to the key. Each entry also carries 'lookup_key' (lower-case, periods and apostrophes removed, whitespace collapsed) and 'lookup_key_short' (same, with a trailing County/Parish/Borough/Census Area/Municipality/City and Borough/Planning Region suffix removed) for dropdown and free-text matching.",
+  "units": "1/2/3/4 = number of dwelling units; values are USD",
+  "note": "PARTIAL COVERAGE - see limits_coverage_report.md. County names are taken from the FHFA official county list joined on FIPS code, because the HUD flat file truncates county names to 15 characters."
+ },
+ "_national": {
+  "floor": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125
+  },
+  "ceiling": {
+   "1": 1249125,
+   "2": 1599375,
+   "3": 1933200,
+   "4": 2402625
+  }
+ },
+ "AK": {
+  "ALEUTIANS EAST BOROUGH": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02013",
+   "lookup_key": "aleutians east borough",
+   "lookup_key_short": "aleutians east"
+  },
+  "ALEUTIANS WEST CENSUS AREA": {
+   "1": 585350,
+   "2": 749350,
+   "3": 905800,
+   "4": 1125700,
+   "fips": "02016",
+   "lookup_key": "aleutians west census area",
+   "lookup_key_short": "aleutians west"
+  },
+  "ANCHORAGE MUNICIPALITY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02020",
+   "lookup_key": "anchorage municipality",
+   "lookup_key_short": "anchorage"
+  },
+  "BETHEL CENSUS AREA": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02050",
+   "lookup_key": "bethel census area",
+   "lookup_key_short": "bethel"
+  },
+  "BRISTOL BAY BOROUGH": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02060",
+   "lookup_key": "bristol bay borough",
+   "lookup_key_short": "bristol bay"
+  },
+  "CHUGACH CENSUS AREA": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02063",
+   "lookup_key": "chugach census area",
+   "lookup_key_short": "chugach"
+  },
+  "COPPER RIVER CENSUS AREA": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02066",
+   "lookup_key": "copper river census area",
+   "lookup_key_short": "copper river"
+  },
+  "DENALI BOROUGH": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02068",
+   "lookup_key": "denali borough",
+   "lookup_key_short": "denali"
+  },
+  "DILLINGHAM CENSUS AREA": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02070",
+   "lookup_key": "dillingham census area",
+   "lookup_key_short": "dillingham"
+  },
+  "FAIRBANKS NORTH STAR BOROUGH": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02090",
+   "lookup_key": "fairbanks north star borough",
+   "lookup_key_short": "fairbanks north star"
+  },
+  "HAINES BOROUGH": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02100",
+   "lookup_key": "haines borough",
+   "lookup_key_short": "haines"
+  },
+  "HOONAH-ANGOON CENSUS AREA": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02105",
+   "lookup_key": "hoonah-angoon census area",
+   "lookup_key_short": "hoonah-angoon"
+  },
+  "JUNEAU CITY AND BOROUGH": {
+   "1": 596850,
+   "2": 764050,
+   "3": 923600,
+   "4": 1147800,
+   "fips": "02110",
+   "lookup_key": "juneau city and borough",
+   "lookup_key_short": "juneau"
+  },
+  "KENAI PENINSULA BOROUGH": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02122",
+   "lookup_key": "kenai peninsula borough",
+   "lookup_key_short": "kenai peninsula"
+  },
+  "KETCHIKAN GATEWAY BOROUGH": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02130",
+   "lookup_key": "ketchikan gateway borough",
+   "lookup_key_short": "ketchikan gateway"
+  },
+  "KODIAK ISLAND BOROUGH": {
+   "1": 541650,
+   "2": 693400,
+   "3": 838150,
+   "4": 1041650,
+   "fips": "02150",
+   "lookup_key": "kodiak island borough",
+   "lookup_key_short": "kodiak island"
+  },
+  "KUSILVAK CENSUS AREA": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02158",
+   "lookup_key": "kusilvak census area",
+   "lookup_key_short": "kusilvak"
+  },
+  "LAKE AND PENINSULA BOROUGH": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02164",
+   "lookup_key": "lake and peninsula borough",
+   "lookup_key_short": "lake and peninsula"
+  },
+  "MATANUSKA-SUSITNA BOROUGH": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02170",
+   "lookup_key": "matanuska-susitna borough",
+   "lookup_key_short": "matanuska-susitna"
+  },
+  "NOME CENSUS AREA": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02180",
+   "lookup_key": "nome census area",
+   "lookup_key_short": "nome"
+  },
+  "NORTH SLOPE BOROUGH": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02185",
+   "lookup_key": "north slope borough",
+   "lookup_key_short": "north slope"
+  },
+  "NORTHWEST ARCTIC BOROUGH": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02188",
+   "lookup_key": "northwest arctic borough",
+   "lookup_key_short": "northwest arctic"
+  },
+  "PETERSBURG CENSUS AREA": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02195",
+   "lookup_key": "petersburg census area",
+   "lookup_key_short": "petersburg"
+  },
+  "PRINCE OF WALES-HYDER CENSUS AREA": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02198",
+   "lookup_key": "prince of wales-hyder census area",
+   "lookup_key_short": "prince of wales-hyder"
+  },
+  "SITKA CITY AND BOROUGH": {
+   "1": 586500,
+   "2": 750800,
+   "3": 907550,
+   "4": 1127900,
+   "fips": "02220",
+   "lookup_key": "sitka city and borough",
+   "lookup_key_short": "sitka"
+  },
+  "SKAGWAY MUNICIPALITY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02230",
+   "lookup_key": "skagway municipality",
+   "lookup_key_short": "skagway"
+  },
+  "SOUTHEAST FAIRBANKS CENSUS AREA": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02240",
+   "lookup_key": "southeast fairbanks census area",
+   "lookup_key_short": "southeast fairbanks"
+  },
+  "WRANGELL CITY AND BOROUGH": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02275",
+   "lookup_key": "wrangell city and borough",
+   "lookup_key_short": "wrangell"
+  },
+  "YAKUTAT CITY AND BOROUGH": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02282",
+   "lookup_key": "yakutat city and borough",
+   "lookup_key_short": "yakutat"
+  },
+  "YUKON-KOYUKUK CENSUS AREA": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "02290",
+   "lookup_key": "yukon-koyukuk census area",
+   "lookup_key_short": "yukon-koyukuk"
+  }
+ },
+ "AL": {
+  "AUTAUGA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01001",
+   "lookup_key": "autauga county",
+   "lookup_key_short": "autauga"
+  },
+  "BALDWIN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01003",
+   "lookup_key": "baldwin county",
+   "lookup_key_short": "baldwin"
+  },
+  "BARBOUR COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01005",
+   "lookup_key": "barbour county",
+   "lookup_key_short": "barbour"
+  },
+  "BIBB COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01007",
+   "lookup_key": "bibb county",
+   "lookup_key_short": "bibb"
+  },
+  "BLOUNT COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01009",
+   "lookup_key": "blount county",
+   "lookup_key_short": "blount"
+  },
+  "BULLOCK COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01011",
+   "lookup_key": "bullock county",
+   "lookup_key_short": "bullock"
+  },
+  "BUTLER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01013",
+   "lookup_key": "butler county",
+   "lookup_key_short": "butler"
+  },
+  "CALHOUN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01015",
+   "lookup_key": "calhoun county",
+   "lookup_key_short": "calhoun"
+  },
+  "CHAMBERS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01017",
+   "lookup_key": "chambers county",
+   "lookup_key_short": "chambers"
+  },
+  "CHEROKEE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01019",
+   "lookup_key": "cherokee county",
+   "lookup_key_short": "cherokee"
+  },
+  "CHILTON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01021",
+   "lookup_key": "chilton county",
+   "lookup_key_short": "chilton"
+  },
+  "CHOCTAW COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01023",
+   "lookup_key": "choctaw county",
+   "lookup_key_short": "choctaw"
+  },
+  "CLARKE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01025",
+   "lookup_key": "clarke county",
+   "lookup_key_short": "clarke"
+  },
+  "CLAY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01027",
+   "lookup_key": "clay county",
+   "lookup_key_short": "clay"
+  },
+  "CLEBURNE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01029",
+   "lookup_key": "cleburne county",
+   "lookup_key_short": "cleburne"
+  },
+  "COFFEE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01031",
+   "lookup_key": "coffee county",
+   "lookup_key_short": "coffee"
+  },
+  "COLBERT COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01033",
+   "lookup_key": "colbert county",
+   "lookup_key_short": "colbert"
+  },
+  "CONECUH COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01035",
+   "lookup_key": "conecuh county",
+   "lookup_key_short": "conecuh"
+  },
+  "COOSA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01037",
+   "lookup_key": "coosa county",
+   "lookup_key_short": "coosa"
+  },
+  "COVINGTON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01039",
+   "lookup_key": "covington county",
+   "lookup_key_short": "covington"
+  },
+  "CRENSHAW COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01041",
+   "lookup_key": "crenshaw county",
+   "lookup_key_short": "crenshaw"
+  },
+  "CULLMAN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01043",
+   "lookup_key": "cullman county",
+   "lookup_key_short": "cullman"
+  },
+  "DALE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01045",
+   "lookup_key": "dale county",
+   "lookup_key_short": "dale"
+  },
+  "DALLAS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01047",
+   "lookup_key": "dallas county",
+   "lookup_key_short": "dallas"
+  },
+  "DEKALB COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01049",
+   "lookup_key": "dekalb county",
+   "lookup_key_short": "dekalb"
+  },
+  "ELMORE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01051",
+   "lookup_key": "elmore county",
+   "lookup_key_short": "elmore"
+  },
+  "ESCAMBIA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01053",
+   "lookup_key": "escambia county",
+   "lookup_key_short": "escambia"
+  },
+  "ETOWAH COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01055",
+   "lookup_key": "etowah county",
+   "lookup_key_short": "etowah"
+  },
+  "FAYETTE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01057",
+   "lookup_key": "fayette county",
+   "lookup_key_short": "fayette"
+  },
+  "FRANKLIN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01059",
+   "lookup_key": "franklin county",
+   "lookup_key_short": "franklin"
+  },
+  "GENEVA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01061",
+   "lookup_key": "geneva county",
+   "lookup_key_short": "geneva"
+  },
+  "GREENE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01063",
+   "lookup_key": "greene county",
+   "lookup_key_short": "greene"
+  },
+  "HALE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01065",
+   "lookup_key": "hale county",
+   "lookup_key_short": "hale"
+  },
+  "HENRY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01067",
+   "lookup_key": "henry county",
+   "lookup_key_short": "henry"
+  },
+  "HOUSTON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01069",
+   "lookup_key": "houston county",
+   "lookup_key_short": "houston"
+  },
+  "JACKSON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01071",
+   "lookup_key": "jackson county",
+   "lookup_key_short": "jackson"
+  },
+  "JEFFERSON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01073",
+   "lookup_key": "jefferson county",
+   "lookup_key_short": "jefferson"
+  },
+  "LAMAR COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01075",
+   "lookup_key": "lamar county",
+   "lookup_key_short": "lamar"
+  },
+  "LAUDERDALE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01077",
+   "lookup_key": "lauderdale county",
+   "lookup_key_short": "lauderdale"
+  },
+  "LAWRENCE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01079",
+   "lookup_key": "lawrence county",
+   "lookup_key_short": "lawrence"
+  },
+  "LEE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01081",
+   "lookup_key": "lee county",
+   "lookup_key_short": "lee"
+  },
+  "LIMESTONE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01083",
+   "lookup_key": "limestone county",
+   "lookup_key_short": "limestone"
+  },
+  "LOWNDES COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01085",
+   "lookup_key": "lowndes county",
+   "lookup_key_short": "lowndes"
+  },
+  "MACON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01087",
+   "lookup_key": "macon county",
+   "lookup_key_short": "macon"
+  },
+  "MADISON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01089",
+   "lookup_key": "madison county",
+   "lookup_key_short": "madison"
+  },
+  "MARENGO COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01091",
+   "lookup_key": "marengo county",
+   "lookup_key_short": "marengo"
+  },
+  "MARION COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01093",
+   "lookup_key": "marion county",
+   "lookup_key_short": "marion"
+  },
+  "MARSHALL COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01095",
+   "lookup_key": "marshall county",
+   "lookup_key_short": "marshall"
+  },
+  "MOBILE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01097",
+   "lookup_key": "mobile county",
+   "lookup_key_short": "mobile"
+  },
+  "MONROE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01099",
+   "lookup_key": "monroe county",
+   "lookup_key_short": "monroe"
+  },
+  "MONTGOMERY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01101",
+   "lookup_key": "montgomery county",
+   "lookup_key_short": "montgomery"
+  },
+  "MORGAN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01103",
+   "lookup_key": "morgan county",
+   "lookup_key_short": "morgan"
+  },
+  "PERRY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01105",
+   "lookup_key": "perry county",
+   "lookup_key_short": "perry"
+  },
+  "PICKENS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01107",
+   "lookup_key": "pickens county",
+   "lookup_key_short": "pickens"
+  },
+  "PIKE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01109",
+   "lookup_key": "pike county",
+   "lookup_key_short": "pike"
+  },
+  "RANDOLPH COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01111",
+   "lookup_key": "randolph county",
+   "lookup_key_short": "randolph"
+  },
+  "RUSSELL COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01113",
+   "lookup_key": "russell county",
+   "lookup_key_short": "russell"
+  },
+  "ST. CLAIR COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01115",
+   "lookup_key": "st clair county",
+   "lookup_key_short": "st clair"
+  },
+  "SHELBY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01117",
+   "lookup_key": "shelby county",
+   "lookup_key_short": "shelby"
+  },
+  "SUMTER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01119",
+   "lookup_key": "sumter county",
+   "lookup_key_short": "sumter"
+  },
+  "TALLADEGA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01121",
+   "lookup_key": "talladega county",
+   "lookup_key_short": "talladega"
+  },
+  "TALLAPOOSA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01123",
+   "lookup_key": "tallapoosa county",
+   "lookup_key_short": "tallapoosa"
+  },
+  "TUSCALOOSA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01125",
+   "lookup_key": "tuscaloosa county",
+   "lookup_key_short": "tuscaloosa"
+  },
+  "WALKER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01127",
+   "lookup_key": "walker county",
+   "lookup_key_short": "walker"
+  },
+  "WASHINGTON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01129",
+   "lookup_key": "washington county",
+   "lookup_key_short": "washington"
+  },
+  "WILCOX COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01131",
+   "lookup_key": "wilcox county",
+   "lookup_key_short": "wilcox"
+  },
+  "WINSTON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "01133",
+   "lookup_key": "winston county",
+   "lookup_key_short": "winston"
+  }
+ },
+ "AR": {
+  "ARKANSAS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05001",
+   "lookup_key": "arkansas county",
+   "lookup_key_short": "arkansas"
+  },
+  "ASHLEY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05003",
+   "lookup_key": "ashley county",
+   "lookup_key_short": "ashley"
+  },
+  "BAXTER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05005",
+   "lookup_key": "baxter county",
+   "lookup_key_short": "baxter"
+  },
+  "BENTON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05007",
+   "lookup_key": "benton county",
+   "lookup_key_short": "benton"
+  },
+  "BOONE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05009",
+   "lookup_key": "boone county",
+   "lookup_key_short": "boone"
+  },
+  "BRADLEY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05011",
+   "lookup_key": "bradley county",
+   "lookup_key_short": "bradley"
+  },
+  "CALHOUN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05013",
+   "lookup_key": "calhoun county",
+   "lookup_key_short": "calhoun"
+  },
+  "CARROLL COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05015",
+   "lookup_key": "carroll county",
+   "lookup_key_short": "carroll"
+  },
+  "CHICOT COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05017",
+   "lookup_key": "chicot county",
+   "lookup_key_short": "chicot"
+  },
+  "CLARK COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05019",
+   "lookup_key": "clark county",
+   "lookup_key_short": "clark"
+  },
+  "CLAY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05021",
+   "lookup_key": "clay county",
+   "lookup_key_short": "clay"
+  },
+  "CLEBURNE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05023",
+   "lookup_key": "cleburne county",
+   "lookup_key_short": "cleburne"
+  },
+  "CLEVELAND COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05025",
+   "lookup_key": "cleveland county",
+   "lookup_key_short": "cleveland"
+  },
+  "COLUMBIA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05027",
+   "lookup_key": "columbia county",
+   "lookup_key_short": "columbia"
+  },
+  "CONWAY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05029",
+   "lookup_key": "conway county",
+   "lookup_key_short": "conway"
+  },
+  "CRAIGHEAD COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05031",
+   "lookup_key": "craighead county",
+   "lookup_key_short": "craighead"
+  },
+  "CRAWFORD COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05033",
+   "lookup_key": "crawford county",
+   "lookup_key_short": "crawford"
+  },
+  "CRITTENDEN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05035",
+   "lookup_key": "crittenden county",
+   "lookup_key_short": "crittenden"
+  },
+  "CROSS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05037",
+   "lookup_key": "cross county",
+   "lookup_key_short": "cross"
+  },
+  "DALLAS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05039",
+   "lookup_key": "dallas county",
+   "lookup_key_short": "dallas"
+  },
+  "DESHA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05041",
+   "lookup_key": "desha county",
+   "lookup_key_short": "desha"
+  },
+  "DREW COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05043",
+   "lookup_key": "drew county",
+   "lookup_key_short": "drew"
+  },
+  "FAULKNER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05045",
+   "lookup_key": "faulkner county",
+   "lookup_key_short": "faulkner"
+  },
+  "FRANKLIN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05047",
+   "lookup_key": "franklin county",
+   "lookup_key_short": "franklin"
+  },
+  "FULTON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05049",
+   "lookup_key": "fulton county",
+   "lookup_key_short": "fulton"
+  },
+  "GARLAND COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05051",
+   "lookup_key": "garland county",
+   "lookup_key_short": "garland"
+  },
+  "GRANT COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05053",
+   "lookup_key": "grant county",
+   "lookup_key_short": "grant"
+  },
+  "GREENE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05055",
+   "lookup_key": "greene county",
+   "lookup_key_short": "greene"
+  },
+  "HEMPSTEAD COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05057",
+   "lookup_key": "hempstead county",
+   "lookup_key_short": "hempstead"
+  },
+  "HOT SPRING COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05059",
+   "lookup_key": "hot spring county",
+   "lookup_key_short": "hot spring"
+  },
+  "HOWARD COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05061",
+   "lookup_key": "howard county",
+   "lookup_key_short": "howard"
+  },
+  "INDEPENDENCE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05063",
+   "lookup_key": "independence county",
+   "lookup_key_short": "independence"
+  },
+  "IZARD COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05065",
+   "lookup_key": "izard county",
+   "lookup_key_short": "izard"
+  },
+  "JACKSON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05067",
+   "lookup_key": "jackson county",
+   "lookup_key_short": "jackson"
+  },
+  "JEFFERSON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05069",
+   "lookup_key": "jefferson county",
+   "lookup_key_short": "jefferson"
+  },
+  "JOHNSON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05071",
+   "lookup_key": "johnson county",
+   "lookup_key_short": "johnson"
+  },
+  "LAFAYETTE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05073",
+   "lookup_key": "lafayette county",
+   "lookup_key_short": "lafayette"
+  },
+  "LAWRENCE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05075",
+   "lookup_key": "lawrence county",
+   "lookup_key_short": "lawrence"
+  },
+  "LEE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05077",
+   "lookup_key": "lee county",
+   "lookup_key_short": "lee"
+  },
+  "LINCOLN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05079",
+   "lookup_key": "lincoln county",
+   "lookup_key_short": "lincoln"
+  },
+  "LITTLE RIVER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05081",
+   "lookup_key": "little river county",
+   "lookup_key_short": "little river"
+  },
+  "LOGAN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05083",
+   "lookup_key": "logan county",
+   "lookup_key_short": "logan"
+  },
+  "LONOKE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05085",
+   "lookup_key": "lonoke county",
+   "lookup_key_short": "lonoke"
+  },
+  "MADISON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05087",
+   "lookup_key": "madison county",
+   "lookup_key_short": "madison"
+  },
+  "MARION COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05089",
+   "lookup_key": "marion county",
+   "lookup_key_short": "marion"
+  },
+  "MILLER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05091",
+   "lookup_key": "miller county",
+   "lookup_key_short": "miller"
+  },
+  "MISSISSIPPI COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05093",
+   "lookup_key": "mississippi county",
+   "lookup_key_short": "mississippi"
+  },
+  "MONROE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05095",
+   "lookup_key": "monroe county",
+   "lookup_key_short": "monroe"
+  },
+  "MONTGOMERY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05097",
+   "lookup_key": "montgomery county",
+   "lookup_key_short": "montgomery"
+  },
+  "NEVADA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05099",
+   "lookup_key": "nevada county",
+   "lookup_key_short": "nevada"
+  },
+  "NEWTON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05101",
+   "lookup_key": "newton county",
+   "lookup_key_short": "newton"
+  },
+  "OUACHITA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05103",
+   "lookup_key": "ouachita county",
+   "lookup_key_short": "ouachita"
+  },
+  "PERRY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05105",
+   "lookup_key": "perry county",
+   "lookup_key_short": "perry"
+  },
+  "PHILLIPS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05107",
+   "lookup_key": "phillips county",
+   "lookup_key_short": "phillips"
+  },
+  "PIKE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05109",
+   "lookup_key": "pike county",
+   "lookup_key_short": "pike"
+  },
+  "POINSETT COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05111",
+   "lookup_key": "poinsett county",
+   "lookup_key_short": "poinsett"
+  },
+  "POLK COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05113",
+   "lookup_key": "polk county",
+   "lookup_key_short": "polk"
+  },
+  "POPE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05115",
+   "lookup_key": "pope county",
+   "lookup_key_short": "pope"
+  },
+  "PRAIRIE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05117",
+   "lookup_key": "prairie county",
+   "lookup_key_short": "prairie"
+  },
+  "PULASKI COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05119",
+   "lookup_key": "pulaski county",
+   "lookup_key_short": "pulaski"
+  },
+  "RANDOLPH COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05121",
+   "lookup_key": "randolph county",
+   "lookup_key_short": "randolph"
+  },
+  "ST. FRANCIS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05123",
+   "lookup_key": "st francis county",
+   "lookup_key_short": "st francis"
+  },
+  "SALINE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05125",
+   "lookup_key": "saline county",
+   "lookup_key_short": "saline"
+  },
+  "SCOTT COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05127",
+   "lookup_key": "scott county",
+   "lookup_key_short": "scott"
+  },
+  "SEARCY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05129",
+   "lookup_key": "searcy county",
+   "lookup_key_short": "searcy"
+  },
+  "SEBASTIAN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05131",
+   "lookup_key": "sebastian county",
+   "lookup_key_short": "sebastian"
+  },
+  "SEVIER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05133",
+   "lookup_key": "sevier county",
+   "lookup_key_short": "sevier"
+  },
+  "SHARP COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05135",
+   "lookup_key": "sharp county",
+   "lookup_key_short": "sharp"
+  },
+  "STONE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05137",
+   "lookup_key": "stone county",
+   "lookup_key_short": "stone"
+  },
+  "UNION COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05139",
+   "lookup_key": "union county",
+   "lookup_key_short": "union"
+  },
+  "VAN BUREN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05141",
+   "lookup_key": "van buren county",
+   "lookup_key_short": "van buren"
+  },
+  "WASHINGTON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05143",
+   "lookup_key": "washington county",
+   "lookup_key_short": "washington"
+  },
+  "WHITE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05145",
+   "lookup_key": "white county",
+   "lookup_key_short": "white"
+  },
+  "WOODRUFF COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05147",
+   "lookup_key": "woodruff county",
+   "lookup_key_short": "woodruff"
+  },
+  "YELL COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "05149",
+   "lookup_key": "yell county",
+   "lookup_key_short": "yell"
+  }
+ },
+ "AZ": {
+  "APACHE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "04001",
+   "lookup_key": "apache county",
+   "lookup_key_short": "apache"
+  },
+  "COCHISE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "04003",
+   "lookup_key": "cochise county",
+   "lookup_key_short": "cochise"
+  },
+  "COCONINO COUNTY": {
+   "1": 609500,
+   "2": 780250,
+   "3": 943150,
+   "4": 1172150,
+   "fips": "04005",
+   "lookup_key": "coconino county",
+   "lookup_key_short": "coconino"
+  },
+  "GILA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "04007",
+   "lookup_key": "gila county",
+   "lookup_key_short": "gila"
+  },
+  "GRAHAM COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "04009",
+   "lookup_key": "graham county",
+   "lookup_key_short": "graham"
+  },
+  "GREENLEE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "04011",
+   "lookup_key": "greenlee county",
+   "lookup_key_short": "greenlee"
+  },
+  "LA PAZ COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "04012",
+   "lookup_key": "la paz county",
+   "lookup_key_short": "la paz"
+  },
+  "MARICOPA COUNTY": {
+   "1": 557750,
+   "2": 714000,
+   "3": 863100,
+   "4": 1072600,
+   "fips": "04013",
+   "lookup_key": "maricopa county",
+   "lookup_key_short": "maricopa"
+  },
+  "MOHAVE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "04015",
+   "lookup_key": "mohave county",
+   "lookup_key_short": "mohave"
+  },
+  "NAVAJO COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "04017",
+   "lookup_key": "navajo county",
+   "lookup_key_short": "navajo"
+  },
+  "PIMA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "04019",
+   "lookup_key": "pima county",
+   "lookup_key_short": "pima"
+  },
+  "PINAL COUNTY": {
+   "1": 557750,
+   "2": 714000,
+   "3": 863100,
+   "4": 1072600,
+   "fips": "04021",
+   "lookup_key": "pinal county",
+   "lookup_key_short": "pinal"
+  },
+  "SANTA CRUZ COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "04023",
+   "lookup_key": "santa cruz county",
+   "lookup_key_short": "santa cruz"
+  },
+  "YAVAPAI COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "04025",
+   "lookup_key": "yavapai county",
+   "lookup_key_short": "yavapai"
+  },
+  "YUMA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "04027",
+   "lookup_key": "yuma county",
+   "lookup_key_short": "yuma"
+  }
+ },
+ "CA": {
+  "ALAMEDA COUNTY": {
+   "1": 1249125,
+   "2": 1599375,
+   "3": 1933200,
+   "4": 2402625,
+   "fips": "06001",
+   "lookup_key": "alameda county",
+   "lookup_key_short": "alameda"
+  },
+  "ALPINE COUNTY": {
+   "1": 736000,
+   "2": 942200,
+   "3": 1138900,
+   "4": 1415400,
+   "fips": "06003",
+   "lookup_key": "alpine county",
+   "lookup_key_short": "alpine"
+  },
+  "AMADOR COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06005",
+   "lookup_key": "amador county",
+   "lookup_key_short": "amador"
+  },
+  "BUTTE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06007",
+   "lookup_key": "butte county",
+   "lookup_key_short": "butte"
+  },
+  "CALAVERAS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06009",
+   "lookup_key": "calaveras county",
+   "lookup_key_short": "calaveras"
+  },
+  "COLUSA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06011",
+   "lookup_key": "colusa county",
+   "lookup_key_short": "colusa"
+  },
+  "CONTRA COSTA COUNTY": {
+   "1": 1249125,
+   "2": 1599375,
+   "3": 1933200,
+   "4": 2402625,
+   "fips": "06013",
+   "lookup_key": "contra costa county",
+   "lookup_key_short": "contra costa"
+  },
+  "DEL NORTE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06015",
+   "lookup_key": "del norte county",
+   "lookup_key_short": "del norte"
+  },
+  "EL DORADO COUNTY": {
+   "1": 764750,
+   "2": 979000,
+   "3": 1183400,
+   "4": 1470700,
+   "fips": "06017",
+   "lookup_key": "el dorado county",
+   "lookup_key_short": "el dorado"
+  },
+  "FRESNO COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06019",
+   "lookup_key": "fresno county",
+   "lookup_key_short": "fresno"
+  },
+  "GLENN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06021",
+   "lookup_key": "glenn county",
+   "lookup_key_short": "glenn"
+  },
+  "HUMBOLDT COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06023",
+   "lookup_key": "humboldt county",
+   "lookup_key_short": "humboldt"
+  },
+  "IMPERIAL COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06025",
+   "lookup_key": "imperial county",
+   "lookup_key_short": "imperial"
+  },
+  "INYO COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06027",
+   "lookup_key": "inyo county",
+   "lookup_key_short": "inyo"
+  },
+  "KERN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06029",
+   "lookup_key": "kern county",
+   "lookup_key_short": "kern"
+  },
+  "KINGS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06031",
+   "lookup_key": "kings county",
+   "lookup_key_short": "kings"
+  },
+  "LAKE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06033",
+   "lookup_key": "lake county",
+   "lookup_key_short": "lake"
+  },
+  "LASSEN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06035",
+   "lookup_key": "lassen county",
+   "lookup_key_short": "lassen"
+  },
+  "LOS ANGELES COUNTY": {
+   "1": 1249125,
+   "2": 1599375,
+   "3": 1933200,
+   "4": 2402625,
+   "fips": "06037",
+   "lookup_key": "los angeles county",
+   "lookup_key_short": "los angeles"
+  },
+  "MADERA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06039",
+   "lookup_key": "madera county",
+   "lookup_key_short": "madera"
+  },
+  "MARIN COUNTY": {
+   "1": 1249125,
+   "2": 1599375,
+   "3": 1933200,
+   "4": 2402625,
+   "fips": "06041",
+   "lookup_key": "marin county",
+   "lookup_key_short": "marin"
+  },
+  "MARIPOSA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06043",
+   "lookup_key": "mariposa county",
+   "lookup_key_short": "mariposa"
+  },
+  "MENDOCINO COUNTY": {
+   "1": 546250,
+   "2": 699300,
+   "3": 845300,
+   "4": 1050500,
+   "fips": "06045",
+   "lookup_key": "mendocino county",
+   "lookup_key_short": "mendocino"
+  },
+  "MERCED COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06047",
+   "lookup_key": "merced county",
+   "lookup_key_short": "merced"
+  },
+  "MODOC COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06049",
+   "lookup_key": "modoc county",
+   "lookup_key_short": "modoc"
+  },
+  "MONO COUNTY": {
+   "1": 776250,
+   "2": 993750,
+   "3": 1201200,
+   "4": 1492800,
+   "fips": "06051",
+   "lookup_key": "mono county",
+   "lookup_key_short": "mono"
+  },
+  "MONTEREY COUNTY": {
+   "1": 994750,
+   "2": 1273450,
+   "3": 1539350,
+   "4": 1913000,
+   "fips": "06053",
+   "lookup_key": "monterey county",
+   "lookup_key_short": "monterey"
+  },
+  "NAPA COUNTY": {
+   "1": 1017750,
+   "2": 1302900,
+   "3": 1574900,
+   "4": 1957250,
+   "fips": "06055",
+   "lookup_key": "napa county",
+   "lookup_key_short": "napa"
+  },
+  "NEVADA COUNTY": {
+   "1": 649750,
+   "2": 831800,
+   "3": 1005450,
+   "4": 1249550,
+   "fips": "06057",
+   "lookup_key": "nevada county",
+   "lookup_key_short": "nevada"
+  },
+  "ORANGE COUNTY": {
+   "1": 1249125,
+   "2": 1599375,
+   "3": 1933200,
+   "4": 2402625,
+   "fips": "06059",
+   "lookup_key": "orange county",
+   "lookup_key_short": "orange"
+  },
+  "PLACER COUNTY": {
+   "1": 764750,
+   "2": 979000,
+   "3": 1183400,
+   "4": 1470700,
+   "fips": "06061",
+   "lookup_key": "placer county",
+   "lookup_key_short": "placer"
+  },
+  "PLUMAS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06063",
+   "lookup_key": "plumas county",
+   "lookup_key_short": "plumas"
+  },
+  "RIVERSIDE COUNTY": {
+   "1": 690000,
+   "2": 883300,
+   "3": 1067750,
+   "4": 1326950,
+   "fips": "06065",
+   "lookup_key": "riverside county",
+   "lookup_key_short": "riverside"
+  },
+  "SACRAMENTO COUNTY": {
+   "1": 764750,
+   "2": 979000,
+   "3": 1183400,
+   "4": 1470700,
+   "fips": "06067",
+   "lookup_key": "sacramento county",
+   "lookup_key_short": "sacramento"
+  },
+  "SAN BENITO COUNTY": {
+   "1": 1249125,
+   "2": 1599375,
+   "3": 1933200,
+   "4": 2402625,
+   "fips": "06069",
+   "lookup_key": "san benito county",
+   "lookup_key_short": "san benito"
+  },
+  "SAN BERNARDINO COUNTY": {
+   "1": 690000,
+   "2": 883300,
+   "3": 1067750,
+   "4": 1326950,
+   "fips": "06071",
+   "lookup_key": "san bernardino county",
+   "lookup_key_short": "san bernardino"
+  },
+  "SAN DIEGO COUNTY": {
+   "1": 1104000,
+   "2": 1413350,
+   "3": 1708400,
+   "4": 2123100,
+   "fips": "06073",
+   "lookup_key": "san diego county",
+   "lookup_key_short": "san diego"
+  },
+  "SAN FRANCISCO COUNTY": {
+   "1": 1249125,
+   "2": 1599375,
+   "3": 1933200,
+   "4": 2402625,
+   "fips": "06075",
+   "lookup_key": "san francisco county",
+   "lookup_key_short": "san francisco"
+  },
+  "SAN JOAQUIN COUNTY": {
+   "1": 678500,
+   "2": 868600,
+   "3": 1049950,
+   "4": 1304850,
+   "fips": "06077",
+   "lookup_key": "san joaquin county",
+   "lookup_key_short": "san joaquin"
+  },
+  "SAN LUIS OBISPO COUNTY": {
+   "1": 1000500,
+   "2": 1280850,
+   "3": 1548250,
+   "4": 1924100,
+   "fips": "06079",
+   "lookup_key": "san luis obispo county",
+   "lookup_key_short": "san luis obispo"
+  },
+  "SAN MATEO COUNTY": {
+   "1": 1249125,
+   "2": 1599375,
+   "3": 1933200,
+   "4": 2402625,
+   "fips": "06081",
+   "lookup_key": "san mateo county",
+   "lookup_key_short": "san mateo"
+  },
+  "SANTA BARBARA COUNTY": {
+   "1": 941850,
+   "2": 1205750,
+   "3": 1457450,
+   "4": 1811300,
+   "fips": "06083",
+   "lookup_key": "santa barbara county",
+   "lookup_key_short": "santa barbara"
+  },
+  "SANTA CLARA COUNTY": {
+   "1": 1249125,
+   "2": 1599375,
+   "3": 1933200,
+   "4": 2402625,
+   "fips": "06085",
+   "lookup_key": "santa clara county",
+   "lookup_key_short": "santa clara"
+  },
+  "SANTA CRUZ COUNTY": {
+   "1": 1249125,
+   "2": 1599375,
+   "3": 1933200,
+   "4": 2402625,
+   "fips": "06087",
+   "lookup_key": "santa cruz county",
+   "lookup_key_short": "santa cruz"
+  },
+  "SHASTA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06089",
+   "lookup_key": "shasta county",
+   "lookup_key_short": "shasta"
+  },
+  "SIERRA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06091",
+   "lookup_key": "sierra county",
+   "lookup_key_short": "sierra"
+  },
+  "SISKIYOU COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06093",
+   "lookup_key": "siskiyou county",
+   "lookup_key_short": "siskiyou"
+  },
+  "SOLANO COUNTY": {
+   "1": 685400,
+   "2": 877450,
+   "3": 1060600,
+   "4": 1318100,
+   "fips": "06095",
+   "lookup_key": "solano county",
+   "lookup_key_short": "solano"
+  },
+  "SONOMA COUNTY": {
+   "1": 897000,
+   "2": 1148350,
+   "3": 1388050,
+   "4": 1725050,
+   "fips": "06097",
+   "lookup_key": "sonoma county",
+   "lookup_key_short": "sonoma"
+  },
+  "STANISLAUS COUNTY": {
+   "1": 545100,
+   "2": 697800,
+   "3": 843500,
+   "4": 1048300,
+   "fips": "06099",
+   "lookup_key": "stanislaus county",
+   "lookup_key_short": "stanislaus"
+  },
+  "SUTTER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06101",
+   "lookup_key": "sutter county",
+   "lookup_key_short": "sutter"
+  },
+  "TEHAMA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06103",
+   "lookup_key": "tehama county",
+   "lookup_key_short": "tehama"
+  },
+  "TRINITY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06105",
+   "lookup_key": "trinity county",
+   "lookup_key_short": "trinity"
+  },
+  "TULARE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06107",
+   "lookup_key": "tulare county",
+   "lookup_key_short": "tulare"
+  },
+  "TUOLUMNE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06109",
+   "lookup_key": "tuolumne county",
+   "lookup_key_short": "tuolumne"
+  },
+  "VENTURA COUNTY": {
+   "1": 1035000,
+   "2": 1325000,
+   "3": 1601600,
+   "4": 1990450,
+   "fips": "06111",
+   "lookup_key": "ventura county",
+   "lookup_key_short": "ventura"
+  },
+  "YOLO COUNTY": {
+   "1": 764750,
+   "2": 979000,
+   "3": 1183400,
+   "4": 1470700,
+   "fips": "06113",
+   "lookup_key": "yolo county",
+   "lookup_key_short": "yolo"
+  },
+  "YUBA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "06115",
+   "lookup_key": "yuba county",
+   "lookup_key_short": "yuba"
+  }
+ },
+ "CO": {
+  "ADAMS COUNTY": {
+   "1": 862500,
+   "2": 1104150,
+   "3": 1334700,
+   "4": 1658700,
+   "fips": "08001",
+   "lookup_key": "adams county",
+   "lookup_key_short": "adams"
+  },
+  "ALAMOSA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08003",
+   "lookup_key": "alamosa county",
+   "lookup_key_short": "alamosa"
+  },
+  "ARAPAHOE COUNTY": {
+   "1": 862500,
+   "2": 1104150,
+   "3": 1334700,
+   "4": 1658700,
+   "fips": "08005",
+   "lookup_key": "arapahoe county",
+   "lookup_key_short": "arapahoe"
+  },
+  "ARCHULETA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08007",
+   "lookup_key": "archuleta county",
+   "lookup_key_short": "archuleta"
+  },
+  "BACA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08009",
+   "lookup_key": "baca county",
+   "lookup_key_short": "baca"
+  },
+  "BENT COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08011",
+   "lookup_key": "bent county",
+   "lookup_key_short": "bent"
+  },
+  "BOULDER COUNTY": {
+   "1": 879750,
+   "2": 1126250,
+   "3": 1361350,
+   "4": 1691850,
+   "fips": "08013",
+   "lookup_key": "boulder county",
+   "lookup_key_short": "boulder"
+  },
+  "BROOMFIELD COUNTY": {
+   "1": 862500,
+   "2": 1104150,
+   "3": 1334700,
+   "4": 1658700,
+   "fips": "08014",
+   "lookup_key": "broomfield county",
+   "lookup_key_short": "broomfield"
+  },
+  "CHAFFEE COUNTY": {
+   "1": 713000,
+   "2": 912750,
+   "3": 1103350,
+   "4": 1371150,
+   "fips": "08015",
+   "lookup_key": "chaffee county",
+   "lookup_key_short": "chaffee"
+  },
+  "CHEYENNE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08017",
+   "lookup_key": "cheyenne county",
+   "lookup_key_short": "cheyenne"
+  },
+  "CLEAR CREEK COUNTY": {
+   "1": 862500,
+   "2": 1104150,
+   "3": 1334700,
+   "4": 1658700,
+   "fips": "08019",
+   "lookup_key": "clear creek county",
+   "lookup_key_short": "clear creek"
+  },
+  "CONEJOS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08021",
+   "lookup_key": "conejos county",
+   "lookup_key_short": "conejos"
+  },
+  "COSTILLA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08023",
+   "lookup_key": "costilla county",
+   "lookup_key_short": "costilla"
+  },
+  "CROWLEY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08025",
+   "lookup_key": "crowley county",
+   "lookup_key_short": "crowley"
+  },
+  "CUSTER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08027",
+   "lookup_key": "custer county",
+   "lookup_key_short": "custer"
+  },
+  "DELTA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08029",
+   "lookup_key": "delta county",
+   "lookup_key_short": "delta"
+  },
+  "DENVER COUNTY": {
+   "1": 862500,
+   "2": 1104150,
+   "3": 1334700,
+   "4": 1658700,
+   "fips": "08031",
+   "lookup_key": "denver county",
+   "lookup_key_short": "denver"
+  },
+  "DOLORES COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08033",
+   "lookup_key": "dolores county",
+   "lookup_key_short": "dolores"
+  },
+  "DOUGLAS COUNTY": {
+   "1": 862500,
+   "2": 1104150,
+   "3": 1334700,
+   "4": 1658700,
+   "fips": "08035",
+   "lookup_key": "douglas county",
+   "lookup_key_short": "douglas"
+  },
+  "EAGLE COUNTY": {
+   "1": 1249125,
+   "2": 1599375,
+   "3": 1933200,
+   "4": 2402625,
+   "fips": "08037",
+   "lookup_key": "eagle county",
+   "lookup_key_short": "eagle"
+  },
+  "ELBERT COUNTY": {
+   "1": 862500,
+   "2": 1104150,
+   "3": 1334700,
+   "4": 1658700,
+   "fips": "08039",
+   "lookup_key": "elbert county",
+   "lookup_key_short": "elbert"
+  },
+  "EL PASO COUNTY": {
+   "1": 541650,
+   "2": 693400,
+   "3": 838150,
+   "4": 1041650,
+   "fips": "08041",
+   "lookup_key": "el paso county",
+   "lookup_key_short": "el paso"
+  },
+  "FREMONT COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08043",
+   "lookup_key": "fremont county",
+   "lookup_key_short": "fremont"
+  },
+  "GARFIELD COUNTY": {
+   "1": 1249125,
+   "2": 1599375,
+   "3": 1933200,
+   "4": 2402625,
+   "fips": "08045",
+   "lookup_key": "garfield county",
+   "lookup_key_short": "garfield"
+  },
+  "GILPIN COUNTY": {
+   "1": 862500,
+   "2": 1104150,
+   "3": 1334700,
+   "4": 1658700,
+   "fips": "08047",
+   "lookup_key": "gilpin county",
+   "lookup_key_short": "gilpin"
+  },
+  "GRAND COUNTY": {
+   "1": 883200,
+   "2": 1130650,
+   "3": 1366700,
+   "4": 1698500,
+   "fips": "08049",
+   "lookup_key": "grand county",
+   "lookup_key_short": "grand"
+  },
+  "GUNNISON COUNTY": {
+   "1": 747500,
+   "2": 956950,
+   "3": 1156700,
+   "4": 1437500,
+   "fips": "08051",
+   "lookup_key": "gunnison county",
+   "lookup_key_short": "gunnison"
+  },
+  "HINSDALE COUNTY": {
+   "1": 563500,
+   "2": 721400,
+   "3": 872000,
+   "4": 1083650,
+   "fips": "08053",
+   "lookup_key": "hinsdale county",
+   "lookup_key_short": "hinsdale"
+  },
+  "HUERFANO COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08055",
+   "lookup_key": "huerfano county",
+   "lookup_key_short": "huerfano"
+  },
+  "JACKSON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08057",
+   "lookup_key": "jackson county",
+   "lookup_key_short": "jackson"
+  },
+  "JEFFERSON COUNTY": {
+   "1": 862500,
+   "2": 1104150,
+   "3": 1334700,
+   "4": 1658700,
+   "fips": "08059",
+   "lookup_key": "jefferson county",
+   "lookup_key_short": "jefferson"
+  },
+  "KIOWA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08061",
+   "lookup_key": "kiowa county",
+   "lookup_key_short": "kiowa"
+  },
+  "KIT CARSON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08063",
+   "lookup_key": "kit carson county",
+   "lookup_key_short": "kit carson"
+  },
+  "LAKE COUNTY": {
+   "1": 1092500,
+   "2": 1398600,
+   "3": 1690600,
+   "4": 2101000,
+   "fips": "08065",
+   "lookup_key": "lake county",
+   "lookup_key_short": "lake"
+  },
+  "LA PLATA COUNTY": {
+   "1": 747500,
+   "2": 956950,
+   "3": 1156700,
+   "4": 1437500,
+   "fips": "08067",
+   "lookup_key": "la plata county",
+   "lookup_key_short": "la plata"
+  },
+  "LARIMER COUNTY": {
+   "1": 634800,
+   "2": 812650,
+   "3": 982300,
+   "4": 1220800,
+   "fips": "08069",
+   "lookup_key": "larimer county",
+   "lookup_key_short": "larimer"
+  },
+  "LAS ANIMAS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08071",
+   "lookup_key": "las animas county",
+   "lookup_key_short": "las animas"
+  },
+  "LINCOLN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08073",
+   "lookup_key": "lincoln county",
+   "lookup_key_short": "lincoln"
+  },
+  "LOGAN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08075",
+   "lookup_key": "logan county",
+   "lookup_key_short": "logan"
+  },
+  "MESA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08077",
+   "lookup_key": "mesa county",
+   "lookup_key_short": "mesa"
+  },
+  "MINERAL COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08079",
+   "lookup_key": "mineral county",
+   "lookup_key_short": "mineral"
+  },
+  "MOFFAT COUNTY": {
+   "1": 1089050,
+   "2": 1394200,
+   "3": 1685250,
+   "4": 2094350,
+   "fips": "08081",
+   "lookup_key": "moffat county",
+   "lookup_key_short": "moffat"
+  },
+  "MONTEZUMA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08083",
+   "lookup_key": "montezuma county",
+   "lookup_key_short": "montezuma"
+  },
+  "MONTROSE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08085",
+   "lookup_key": "montrose county",
+   "lookup_key_short": "montrose"
+  },
+  "MORGAN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08087",
+   "lookup_key": "morgan county",
+   "lookup_key_short": "morgan"
+  },
+  "OTERO COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08089",
+   "lookup_key": "otero county",
+   "lookup_key_short": "otero"
+  },
+  "OURAY COUNTY": {
+   "1": 750950,
+   "2": 961350,
+   "3": 1162050,
+   "4": 1444150,
+   "fips": "08091",
+   "lookup_key": "ouray county",
+   "lookup_key_short": "ouray"
+  },
+  "PARK COUNTY": {
+   "1": 862500,
+   "2": 1104150,
+   "3": 1334700,
+   "4": 1658700,
+   "fips": "08093",
+   "lookup_key": "park county",
+   "lookup_key_short": "park"
+  },
+  "PHILLIPS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08095",
+   "lookup_key": "phillips county",
+   "lookup_key_short": "phillips"
+  },
+  "PITKIN COUNTY": {
+   "1": 1249125,
+   "2": 1599375,
+   "3": 1933200,
+   "4": 2402625,
+   "fips": "08097",
+   "lookup_key": "pitkin county",
+   "lookup_key_short": "pitkin"
+  },
+  "PROWERS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08099",
+   "lookup_key": "prowers county",
+   "lookup_key_short": "prowers"
+  },
+  "PUEBLO COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08101",
+   "lookup_key": "pueblo county",
+   "lookup_key_short": "pueblo"
+  },
+  "RIO BLANCO COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08103",
+   "lookup_key": "rio blanco county",
+   "lookup_key_short": "rio blanco"
+  },
+  "RIO GRANDE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08105",
+   "lookup_key": "rio grande county",
+   "lookup_key_short": "rio grande"
+  },
+  "ROUTT COUNTY": {
+   "1": 1089050,
+   "2": 1394200,
+   "3": 1685250,
+   "4": 2094350,
+   "fips": "08107",
+   "lookup_key": "routt county",
+   "lookup_key_short": "routt"
+  },
+  "SAGUACHE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08109",
+   "lookup_key": "saguache county",
+   "lookup_key_short": "saguache"
+  },
+  "SAN JUAN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08111",
+   "lookup_key": "san juan county",
+   "lookup_key_short": "san juan"
+  },
+  "SAN MIGUEL COUNTY": {
+   "1": 1045350,
+   "2": 1338250,
+   "3": 1617650,
+   "4": 2010350,
+   "fips": "08113",
+   "lookup_key": "san miguel county",
+   "lookup_key_short": "san miguel"
+  },
+  "SEDGWICK COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08115",
+   "lookup_key": "sedgwick county",
+   "lookup_key_short": "sedgwick"
+  },
+  "SUMMIT COUNTY": {
+   "1": 1092500,
+   "2": 1398600,
+   "3": 1690600,
+   "4": 2101000,
+   "fips": "08117",
+   "lookup_key": "summit county",
+   "lookup_key_short": "summit"
+  },
+  "TELLER COUNTY": {
+   "1": 541650,
+   "2": 693400,
+   "3": 838150,
+   "4": 1041650,
+   "fips": "08119",
+   "lookup_key": "teller county",
+   "lookup_key_short": "teller"
+  },
+  "WASHINGTON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08121",
+   "lookup_key": "washington county",
+   "lookup_key_short": "washington"
+  },
+  "WELD COUNTY": {
+   "1": 575000,
+   "2": 736100,
+   "3": 889800,
+   "4": 1105800,
+   "fips": "08123",
+   "lookup_key": "weld county",
+   "lookup_key_short": "weld"
+  },
+  "YUMA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "08125",
+   "lookup_key": "yuma county",
+   "lookup_key_short": "yuma"
+  }
+ },
+ "CT": {
+  "Capitol Planning Region": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "09110",
+   "lookup_key": "capitol planning region",
+   "lookup_key_short": "capitol"
+  },
+  "Greater Bridgeport Planning Region": {
+   "1": 977500,
+   "2": 1251400,
+   "3": 1512650,
+   "4": 1879850,
+   "fips": "09120",
+   "lookup_key": "greater bridgeport planning region",
+   "lookup_key_short": "greater bridgeport"
+  },
+  "Lower Connecticut River Valley Planning Region": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "09130",
+   "lookup_key": "lower connecticut river valley planning region",
+   "lookup_key_short": "lower connecticut river valley"
+  },
+  "Naugatuck Valley Planning Region": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "09140",
+   "lookup_key": "naugatuck valley planning region",
+   "lookup_key_short": "naugatuck valley"
+  },
+  "Northeastern Connecticut Planning Region": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "09150",
+   "lookup_key": "northeastern connecticut planning region",
+   "lookup_key_short": "northeastern connecticut"
+  },
+  "Northwest Hills Planning Region": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "09160",
+   "lookup_key": "northwest hills planning region",
+   "lookup_key_short": "northwest hills"
+  },
+  "South Central Connecticut Planning Region": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "09170",
+   "lookup_key": "south central connecticut planning region",
+   "lookup_key_short": "south central connecticut"
+  },
+  "Southeastern Connecticut Planning Region": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "09180",
+   "lookup_key": "southeastern connecticut planning region",
+   "lookup_key_short": "southeastern connecticut"
+  },
+  "Western Connecticut Planning Region": {
+   "1": 977500,
+   "2": 1251400,
+   "3": 1512650,
+   "4": 1879850,
+   "fips": "09190",
+   "lookup_key": "western connecticut planning region",
+   "lookup_key_short": "western connecticut"
+  }
+ },
+ "DC": {
+  "DISTRICT OF COLUMBIA": {
+   "1": 1249125,
+   "2": 1599375,
+   "3": 1933200,
+   "4": 2402625,
+   "fips": "11001",
+   "lookup_key": "district of columbia",
+   "lookup_key_short": "district of columbia"
+  }
+ },
+ "DE": {
+  "KENT COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "10001",
+   "lookup_key": "kent county",
+   "lookup_key_short": "kent"
+  },
+  "NEW CASTLE COUNTY": {
+   "1": 630200,
+   "2": 806750,
+   "3": 975200,
+   "4": 1211950,
+   "fips": "10003",
+   "lookup_key": "new castle county",
+   "lookup_key_short": "new castle"
+  },
+  "SUSSEX COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "10005",
+   "lookup_key": "sussex county",
+   "lookup_key_short": "sussex"
+  }
+ },
+ "FL": {
+  "ALACHUA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12001",
+   "lookup_key": "alachua county",
+   "lookup_key_short": "alachua"
+  },
+  "BAKER COUNTY": {
+   "1": 580750,
+   "2": 743450,
+   "3": 898700,
+   "4": 1116850,
+   "fips": "12003",
+   "lookup_key": "baker county",
+   "lookup_key_short": "baker"
+  },
+  "BAY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12005",
+   "lookup_key": "bay county",
+   "lookup_key_short": "bay"
+  },
+  "BRADFORD COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12007",
+   "lookup_key": "bradford county",
+   "lookup_key_short": "bradford"
+  },
+  "BREVARD COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12009",
+   "lookup_key": "brevard county",
+   "lookup_key_short": "brevard"
+  },
+  "BROWARD COUNTY": {
+   "1": 667000,
+   "2": 853900,
+   "3": 1032150,
+   "4": 1282700,
+   "fips": "12011",
+   "lookup_key": "broward county",
+   "lookup_key_short": "broward"
+  },
+  "CALHOUN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12013",
+   "lookup_key": "calhoun county",
+   "lookup_key_short": "calhoun"
+  },
+  "CHARLOTTE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12015",
+   "lookup_key": "charlotte county",
+   "lookup_key_short": "charlotte"
+  },
+  "CITRUS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12017",
+   "lookup_key": "citrus county",
+   "lookup_key_short": "citrus"
+  },
+  "CLAY COUNTY": {
+   "1": 580750,
+   "2": 743450,
+   "3": 898700,
+   "4": 1116850,
+   "fips": "12019",
+   "lookup_key": "clay county",
+   "lookup_key_short": "clay"
+  },
+  "COLLIER COUNTY": {
+   "1": 764750,
+   "2": 979000,
+   "3": 1183400,
+   "4": 1470700,
+   "fips": "12021",
+   "lookup_key": "collier county",
+   "lookup_key_short": "collier"
+  },
+  "COLUMBIA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12023",
+   "lookup_key": "columbia county",
+   "lookup_key_short": "columbia"
+  },
+  "DESOTO COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12027",
+   "lookup_key": "desoto county",
+   "lookup_key_short": "desoto"
+  },
+  "DIXIE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12029",
+   "lookup_key": "dixie county",
+   "lookup_key_short": "dixie"
+  },
+  "DUVAL COUNTY": {
+   "1": 580750,
+   "2": 743450,
+   "3": 898700,
+   "4": 1116850,
+   "fips": "12031",
+   "lookup_key": "duval county",
+   "lookup_key_short": "duval"
+  },
+  "ESCAMBIA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12033",
+   "lookup_key": "escambia county",
+   "lookup_key_short": "escambia"
+  },
+  "FLAGLER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12035",
+   "lookup_key": "flagler county",
+   "lookup_key_short": "flagler"
+  },
+  "FRANKLIN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12037",
+   "lookup_key": "franklin county",
+   "lookup_key_short": "franklin"
+  },
+  "GADSDEN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12039",
+   "lookup_key": "gadsden county",
+   "lookup_key_short": "gadsden"
+  },
+  "GILCHRIST COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12041",
+   "lookup_key": "gilchrist county",
+   "lookup_key_short": "gilchrist"
+  },
+  "GLADES COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12043",
+   "lookup_key": "glades county",
+   "lookup_key_short": "glades"
+  },
+  "GULF COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12045",
+   "lookup_key": "gulf county",
+   "lookup_key_short": "gulf"
+  },
+  "HAMILTON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12047",
+   "lookup_key": "hamilton county",
+   "lookup_key_short": "hamilton"
+  },
+  "HARDEE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12049",
+   "lookup_key": "hardee county",
+   "lookup_key_short": "hardee"
+  },
+  "HENDRY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12051",
+   "lookup_key": "hendry county",
+   "lookup_key_short": "hendry"
+  },
+  "HERNANDO COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12053",
+   "lookup_key": "hernando county",
+   "lookup_key_short": "hernando"
+  },
+  "HIGHLANDS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12055",
+   "lookup_key": "highlands county",
+   "lookup_key_short": "highlands"
+  },
+  "HILLSBOROUGH COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12057",
+   "lookup_key": "hillsborough county",
+   "lookup_key_short": "hillsborough"
+  },
+  "HOLMES COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12059",
+   "lookup_key": "holmes county",
+   "lookup_key_short": "holmes"
+  },
+  "INDIAN RIVER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12061",
+   "lookup_key": "indian river county",
+   "lookup_key_short": "indian river"
+  },
+  "JACKSON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12063",
+   "lookup_key": "jackson county",
+   "lookup_key_short": "jackson"
+  },
+  "JEFFERSON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12065",
+   "lookup_key": "jefferson county",
+   "lookup_key_short": "jefferson"
+  },
+  "LAFAYETTE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12067",
+   "lookup_key": "lafayette county",
+   "lookup_key_short": "lafayette"
+  },
+  "LAKE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12069",
+   "lookup_key": "lake county",
+   "lookup_key_short": "lake"
+  },
+  "LEE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12071",
+   "lookup_key": "lee county",
+   "lookup_key_short": "lee"
+  },
+  "LEON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12073",
+   "lookup_key": "leon county",
+   "lookup_key_short": "leon"
+  },
+  "LEVY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12075",
+   "lookup_key": "levy county",
+   "lookup_key_short": "levy"
+  },
+  "LIBERTY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12077",
+   "lookup_key": "liberty county",
+   "lookup_key_short": "liberty"
+  },
+  "MADISON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12079",
+   "lookup_key": "madison county",
+   "lookup_key_short": "madison"
+  },
+  "MANATEE COUNTY": {
+   "1": 547400,
+   "2": 700750,
+   "3": 847050,
+   "4": 1052700,
+   "fips": "12081",
+   "lookup_key": "manatee county",
+   "lookup_key_short": "manatee"
+  },
+  "MARION COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12083",
+   "lookup_key": "marion county",
+   "lookup_key_short": "marion"
+  },
+  "MARTIN COUNTY": {
+   "1": 603750,
+   "2": 772900,
+   "3": 934250,
+   "4": 1161050,
+   "fips": "12085",
+   "lookup_key": "martin county",
+   "lookup_key_short": "martin"
+  },
+  "MIAMI-DADE COUNTY": {
+   "1": 667000,
+   "2": 853900,
+   "3": 1032150,
+   "4": 1282700,
+   "fips": "12086",
+   "lookup_key": "miami-dade county",
+   "lookup_key_short": "miami-dade"
+  },
+  "MONROE COUNTY": {
+   "1": 990150,
+   "2": 1267600,
+   "3": 1532200,
+   "4": 1904150,
+   "fips": "12087",
+   "lookup_key": "monroe county",
+   "lookup_key_short": "monroe"
+  },
+  "NASSAU COUNTY": {
+   "1": 580750,
+   "2": 743450,
+   "3": 898700,
+   "4": 1116850,
+   "fips": "12089",
+   "lookup_key": "nassau county",
+   "lookup_key_short": "nassau"
+  },
+  "OKALOOSA COUNTY": {
+   "1": 603750,
+   "2": 772900,
+   "3": 934250,
+   "4": 1161050,
+   "fips": "12091",
+   "lookup_key": "okaloosa county",
+   "lookup_key_short": "okaloosa"
+  },
+  "OKEECHOBEE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12093",
+   "lookup_key": "okeechobee county",
+   "lookup_key_short": "okeechobee"
+  },
+  "ORANGE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12095",
+   "lookup_key": "orange county",
+   "lookup_key_short": "orange"
+  },
+  "OSCEOLA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12097",
+   "lookup_key": "osceola county",
+   "lookup_key_short": "osceola"
+  },
+  "PALM BEACH COUNTY": {
+   "1": 667000,
+   "2": 853900,
+   "3": 1032150,
+   "4": 1282700,
+   "fips": "12099",
+   "lookup_key": "palm beach county",
+   "lookup_key_short": "palm beach"
+  },
+  "PASCO COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12101",
+   "lookup_key": "pasco county",
+   "lookup_key_short": "pasco"
+  },
+  "PINELLAS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12103",
+   "lookup_key": "pinellas county",
+   "lookup_key_short": "pinellas"
+  },
+  "POLK COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12105",
+   "lookup_key": "polk county",
+   "lookup_key_short": "polk"
+  },
+  "PUTNAM COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12107",
+   "lookup_key": "putnam county",
+   "lookup_key_short": "putnam"
+  },
+  "ST. JOHNS COUNTY": {
+   "1": 580750,
+   "2": 743450,
+   "3": 898700,
+   "4": 1116850,
+   "fips": "12109",
+   "lookup_key": "st johns county",
+   "lookup_key_short": "st johns"
+  },
+  "ST. LUCIE COUNTY": {
+   "1": 603750,
+   "2": 772900,
+   "3": 934250,
+   "4": 1161050,
+   "fips": "12111",
+   "lookup_key": "st lucie county",
+   "lookup_key_short": "st lucie"
+  },
+  "SANTA ROSA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12113",
+   "lookup_key": "santa rosa county",
+   "lookup_key_short": "santa rosa"
+  },
+  "SARASOTA COUNTY": {
+   "1": 547400,
+   "2": 700750,
+   "3": 847050,
+   "4": 1052700,
+   "fips": "12115",
+   "lookup_key": "sarasota county",
+   "lookup_key_short": "sarasota"
+  },
+  "SEMINOLE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12117",
+   "lookup_key": "seminole county",
+   "lookup_key_short": "seminole"
+  },
+  "SUMTER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12119",
+   "lookup_key": "sumter county",
+   "lookup_key_short": "sumter"
+  },
+  "SUWANNEE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12121",
+   "lookup_key": "suwannee county",
+   "lookup_key_short": "suwannee"
+  },
+  "TAYLOR COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12123",
+   "lookup_key": "taylor county",
+   "lookup_key_short": "taylor"
+  },
+  "UNION COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12125",
+   "lookup_key": "union county",
+   "lookup_key_short": "union"
+  },
+  "VOLUSIA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12127",
+   "lookup_key": "volusia county",
+   "lookup_key_short": "volusia"
+  },
+  "WAKULLA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12129",
+   "lookup_key": "wakulla county",
+   "lookup_key_short": "wakulla"
+  },
+  "WALTON COUNTY": {
+   "1": 603750,
+   "2": 772900,
+   "3": 934250,
+   "4": 1161050,
+   "fips": "12131",
+   "lookup_key": "walton county",
+   "lookup_key_short": "walton"
+  },
+  "WASHINGTON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "12133",
+   "lookup_key": "washington county",
+   "lookup_key_short": "washington"
+  }
+ },
+ "GA": {
+  "APPLING COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13001",
+   "lookup_key": "appling county",
+   "lookup_key_short": "appling"
+  },
+  "ATKINSON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13003",
+   "lookup_key": "atkinson county",
+   "lookup_key_short": "atkinson"
+  },
+  "BACON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13005",
+   "lookup_key": "bacon county",
+   "lookup_key_short": "bacon"
+  },
+  "BAKER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13007",
+   "lookup_key": "baker county",
+   "lookup_key_short": "baker"
+  },
+  "BALDWIN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13009",
+   "lookup_key": "baldwin county",
+   "lookup_key_short": "baldwin"
+  },
+  "BANKS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13011",
+   "lookup_key": "banks county",
+   "lookup_key_short": "banks"
+  },
+  "BARROW COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13013",
+   "lookup_key": "barrow county",
+   "lookup_key_short": "barrow"
+  },
+  "BARTOW COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13015",
+   "lookup_key": "bartow county",
+   "lookup_key_short": "bartow"
+  },
+  "BEN HILL COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13017",
+   "lookup_key": "ben hill county",
+   "lookup_key_short": "ben hill"
+  },
+  "BERRIEN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13019",
+   "lookup_key": "berrien county",
+   "lookup_key_short": "berrien"
+  },
+  "BIBB COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13021",
+   "lookup_key": "bibb county",
+   "lookup_key_short": "bibb"
+  },
+  "BLECKLEY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13023",
+   "lookup_key": "bleckley county",
+   "lookup_key_short": "bleckley"
+  },
+  "BRANTLEY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13025",
+   "lookup_key": "brantley county",
+   "lookup_key_short": "brantley"
+  },
+  "BROOKS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13027",
+   "lookup_key": "brooks county",
+   "lookup_key_short": "brooks"
+  },
+  "BRYAN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13029",
+   "lookup_key": "bryan county",
+   "lookup_key_short": "bryan"
+  },
+  "BULLOCH COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13031",
+   "lookup_key": "bulloch county",
+   "lookup_key_short": "bulloch"
+  },
+  "BURKE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13033",
+   "lookup_key": "burke county",
+   "lookup_key_short": "burke"
+  },
+  "BUTTS COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13035",
+   "lookup_key": "butts county",
+   "lookup_key_short": "butts"
+  },
+  "CALHOUN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13037",
+   "lookup_key": "calhoun county",
+   "lookup_key_short": "calhoun"
+  },
+  "CAMDEN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13039",
+   "lookup_key": "camden county",
+   "lookup_key_short": "camden"
+  },
+  "CANDLER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13043",
+   "lookup_key": "candler county",
+   "lookup_key_short": "candler"
+  },
+  "CARROLL COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13045",
+   "lookup_key": "carroll county",
+   "lookup_key_short": "carroll"
+  },
+  "CATOOSA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13047",
+   "lookup_key": "catoosa county",
+   "lookup_key_short": "catoosa"
+  },
+  "CHARLTON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13049",
+   "lookup_key": "charlton county",
+   "lookup_key_short": "charlton"
+  },
+  "CHATHAM COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13051",
+   "lookup_key": "chatham county",
+   "lookup_key_short": "chatham"
+  },
+  "CHATTAHOOCHEE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13053",
+   "lookup_key": "chattahoochee county",
+   "lookup_key_short": "chattahoochee"
+  },
+  "CHATTOOGA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13055",
+   "lookup_key": "chattooga county",
+   "lookup_key_short": "chattooga"
+  },
+  "CHEROKEE COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13057",
+   "lookup_key": "cherokee county",
+   "lookup_key_short": "cherokee"
+  },
+  "CLARKE COUNTY": {
+   "1": 616400,
+   "2": 789100,
+   "3": 953850,
+   "4": 1185400,
+   "fips": "13059",
+   "lookup_key": "clarke county",
+   "lookup_key_short": "clarke"
+  },
+  "CLAY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13061",
+   "lookup_key": "clay county",
+   "lookup_key_short": "clay"
+  },
+  "CLAYTON COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13063",
+   "lookup_key": "clayton county",
+   "lookup_key_short": "clayton"
+  },
+  "CLINCH COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13065",
+   "lookup_key": "clinch county",
+   "lookup_key_short": "clinch"
+  },
+  "COBB COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13067",
+   "lookup_key": "cobb county",
+   "lookup_key_short": "cobb"
+  },
+  "COFFEE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13069",
+   "lookup_key": "coffee county",
+   "lookup_key_short": "coffee"
+  },
+  "COLQUITT COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13071",
+   "lookup_key": "colquitt county",
+   "lookup_key_short": "colquitt"
+  },
+  "COLUMBIA COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13073",
+   "lookup_key": "columbia county",
+   "lookup_key_short": "columbia"
+  },
+  "COOK COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13075",
+   "lookup_key": "cook county",
+   "lookup_key_short": "cook"
+  },
+  "COWETA COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13077",
+   "lookup_key": "coweta county",
+   "lookup_key_short": "coweta"
+  },
+  "CRAWFORD COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13079",
+   "lookup_key": "crawford county",
+   "lookup_key_short": "crawford"
+  },
+  "CRISP COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13081",
+   "lookup_key": "crisp county",
+   "lookup_key_short": "crisp"
+  },
+  "DADE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13083",
+   "lookup_key": "dade county",
+   "lookup_key_short": "dade"
+  },
+  "DAWSON COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13085",
+   "lookup_key": "dawson county",
+   "lookup_key_short": "dawson"
+  },
+  "DECATUR COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13087",
+   "lookup_key": "decatur county",
+   "lookup_key_short": "decatur"
+  },
+  "DEKALB COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13089",
+   "lookup_key": "dekalb county",
+   "lookup_key_short": "dekalb"
+  },
+  "DODGE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13091",
+   "lookup_key": "dodge county",
+   "lookup_key_short": "dodge"
+  },
+  "DOOLY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13093",
+   "lookup_key": "dooly county",
+   "lookup_key_short": "dooly"
+  },
+  "DOUGHERTY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13095",
+   "lookup_key": "dougherty county",
+   "lookup_key_short": "dougherty"
+  },
+  "DOUGLAS COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13097",
+   "lookup_key": "douglas county",
+   "lookup_key_short": "douglas"
+  },
+  "EARLY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13099",
+   "lookup_key": "early county",
+   "lookup_key_short": "early"
+  },
+  "ECHOLS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13101",
+   "lookup_key": "echols county",
+   "lookup_key_short": "echols"
+  },
+  "EFFINGHAM COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13103",
+   "lookup_key": "effingham county",
+   "lookup_key_short": "effingham"
+  },
+  "ELBERT COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13105",
+   "lookup_key": "elbert county",
+   "lookup_key_short": "elbert"
+  },
+  "EMANUEL COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13107",
+   "lookup_key": "emanuel county",
+   "lookup_key_short": "emanuel"
+  },
+  "EVANS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13109",
+   "lookup_key": "evans county",
+   "lookup_key_short": "evans"
+  },
+  "FANNIN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13111",
+   "lookup_key": "fannin county",
+   "lookup_key_short": "fannin"
+  },
+  "FAYETTE COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13113",
+   "lookup_key": "fayette county",
+   "lookup_key_short": "fayette"
+  },
+  "FLOYD COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13115",
+   "lookup_key": "floyd county",
+   "lookup_key_short": "floyd"
+  },
+  "FORSYTH COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13117",
+   "lookup_key": "forsyth county",
+   "lookup_key_short": "forsyth"
+  },
+  "FRANKLIN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13119",
+   "lookup_key": "franklin county",
+   "lookup_key_short": "franklin"
+  },
+  "FULTON COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13121",
+   "lookup_key": "fulton county",
+   "lookup_key_short": "fulton"
+  },
+  "GILMER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13123",
+   "lookup_key": "gilmer county",
+   "lookup_key_short": "gilmer"
+  },
+  "GLASCOCK COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13125",
+   "lookup_key": "glascock county",
+   "lookup_key_short": "glascock"
+  },
+  "GLYNN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13127",
+   "lookup_key": "glynn county",
+   "lookup_key_short": "glynn"
+  },
+  "GORDON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13129",
+   "lookup_key": "gordon county",
+   "lookup_key_short": "gordon"
+  },
+  "GRADY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13131",
+   "lookup_key": "grady county",
+   "lookup_key_short": "grady"
+  },
+  "GREENE COUNTY": {
+   "1": 638250,
+   "2": 817050,
+   "3": 987650,
+   "4": 1227400,
+   "fips": "13133",
+   "lookup_key": "greene county",
+   "lookup_key_short": "greene"
+  },
+  "GWINNETT COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13135",
+   "lookup_key": "gwinnett county",
+   "lookup_key_short": "gwinnett"
+  },
+  "HABERSHAM COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13137",
+   "lookup_key": "habersham county",
+   "lookup_key_short": "habersham"
+  },
+  "HALL COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13139",
+   "lookup_key": "hall county",
+   "lookup_key_short": "hall"
+  },
+  "HANCOCK COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13141",
+   "lookup_key": "hancock county",
+   "lookup_key_short": "hancock"
+  },
+  "HARALSON COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13143",
+   "lookup_key": "haralson county",
+   "lookup_key_short": "haralson"
+  },
+  "HARRIS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13145",
+   "lookup_key": "harris county",
+   "lookup_key_short": "harris"
+  },
+  "HART COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13147",
+   "lookup_key": "hart county",
+   "lookup_key_short": "hart"
+  },
+  "HEARD COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13149",
+   "lookup_key": "heard county",
+   "lookup_key_short": "heard"
+  },
+  "HENRY COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13151",
+   "lookup_key": "henry county",
+   "lookup_key_short": "henry"
+  },
+  "HOUSTON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13153",
+   "lookup_key": "houston county",
+   "lookup_key_short": "houston"
+  },
+  "IRWIN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13155",
+   "lookup_key": "irwin county",
+   "lookup_key_short": "irwin"
+  },
+  "JACKSON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13157",
+   "lookup_key": "jackson county",
+   "lookup_key_short": "jackson"
+  },
+  "JASPER COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13159",
+   "lookup_key": "jasper county",
+   "lookup_key_short": "jasper"
+  },
+  "JEFF DAVIS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13161",
+   "lookup_key": "jeff davis county",
+   "lookup_key_short": "jeff davis"
+  },
+  "JEFFERSON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13163",
+   "lookup_key": "jefferson county",
+   "lookup_key_short": "jefferson"
+  },
+  "JENKINS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13165",
+   "lookup_key": "jenkins county",
+   "lookup_key_short": "jenkins"
+  },
+  "JOHNSON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13167",
+   "lookup_key": "johnson county",
+   "lookup_key_short": "johnson"
+  },
+  "JONES COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13169",
+   "lookup_key": "jones county",
+   "lookup_key_short": "jones"
+  },
+  "LAMAR COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13171",
+   "lookup_key": "lamar county",
+   "lookup_key_short": "lamar"
+  },
+  "LANIER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13173",
+   "lookup_key": "lanier county",
+   "lookup_key_short": "lanier"
+  },
+  "LAURENS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13175",
+   "lookup_key": "laurens county",
+   "lookup_key_short": "laurens"
+  },
+  "LEE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13177",
+   "lookup_key": "lee county",
+   "lookup_key_short": "lee"
+  },
+  "LIBERTY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13179",
+   "lookup_key": "liberty county",
+   "lookup_key_short": "liberty"
+  },
+  "LINCOLN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13181",
+   "lookup_key": "lincoln county",
+   "lookup_key_short": "lincoln"
+  },
+  "LONG COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13183",
+   "lookup_key": "long county",
+   "lookup_key_short": "long"
+  },
+  "LOWNDES COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13185",
+   "lookup_key": "lowndes county",
+   "lookup_key_short": "lowndes"
+  },
+  "LUMPKIN COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13187",
+   "lookup_key": "lumpkin county",
+   "lookup_key_short": "lumpkin"
+  },
+  "MCDUFFIE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13189",
+   "lookup_key": "mcduffie county",
+   "lookup_key_short": "mcduffie"
+  },
+  "MCINTOSH COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13191",
+   "lookup_key": "mcintosh county",
+   "lookup_key_short": "mcintosh"
+  },
+  "MACON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13193",
+   "lookup_key": "macon county",
+   "lookup_key_short": "macon"
+  },
+  "MADISON COUNTY": {
+   "1": 616400,
+   "2": 789100,
+   "3": 953850,
+   "4": 1185400,
+   "fips": "13195",
+   "lookup_key": "madison county",
+   "lookup_key_short": "madison"
+  },
+  "MARION COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13197",
+   "lookup_key": "marion county",
+   "lookup_key_short": "marion"
+  },
+  "MERIWETHER COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13199",
+   "lookup_key": "meriwether county",
+   "lookup_key_short": "meriwether"
+  },
+  "MILLER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13201",
+   "lookup_key": "miller county",
+   "lookup_key_short": "miller"
+  },
+  "MITCHELL COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13205",
+   "lookup_key": "mitchell county",
+   "lookup_key_short": "mitchell"
+  },
+  "MONROE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13207",
+   "lookup_key": "monroe county",
+   "lookup_key_short": "monroe"
+  },
+  "MONTGOMERY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13209",
+   "lookup_key": "montgomery county",
+   "lookup_key_short": "montgomery"
+  },
+  "MORGAN COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13211",
+   "lookup_key": "morgan county",
+   "lookup_key_short": "morgan"
+  },
+  "MURRAY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13213",
+   "lookup_key": "murray county",
+   "lookup_key_short": "murray"
+  },
+  "MUSCOGEE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13215",
+   "lookup_key": "muscogee county",
+   "lookup_key_short": "muscogee"
+  },
+  "NEWTON COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13217",
+   "lookup_key": "newton county",
+   "lookup_key_short": "newton"
+  },
+  "OCONEE COUNTY": {
+   "1": 616400,
+   "2": 789100,
+   "3": 953850,
+   "4": 1185400,
+   "fips": "13219",
+   "lookup_key": "oconee county",
+   "lookup_key_short": "oconee"
+  },
+  "OGLETHORPE COUNTY": {
+   "1": 616400,
+   "2": 789100,
+   "3": 953850,
+   "4": 1185400,
+   "fips": "13221",
+   "lookup_key": "oglethorpe county",
+   "lookup_key_short": "oglethorpe"
+  },
+  "PAULDING COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13223",
+   "lookup_key": "paulding county",
+   "lookup_key_short": "paulding"
+  },
+  "PEACH COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13225",
+   "lookup_key": "peach county",
+   "lookup_key_short": "peach"
+  },
+  "PICKENS COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13227",
+   "lookup_key": "pickens county",
+   "lookup_key_short": "pickens"
+  },
+  "PIERCE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13229",
+   "lookup_key": "pierce county",
+   "lookup_key_short": "pierce"
+  },
+  "PIKE COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13231",
+   "lookup_key": "pike county",
+   "lookup_key_short": "pike"
+  },
+  "POLK COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13233",
+   "lookup_key": "polk county",
+   "lookup_key_short": "polk"
+  },
+  "PULASKI COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13235",
+   "lookup_key": "pulaski county",
+   "lookup_key_short": "pulaski"
+  },
+  "PUTNAM COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13237",
+   "lookup_key": "putnam county",
+   "lookup_key_short": "putnam"
+  },
+  "QUITMAN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13239",
+   "lookup_key": "quitman county",
+   "lookup_key_short": "quitman"
+  },
+  "RABUN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13241",
+   "lookup_key": "rabun county",
+   "lookup_key_short": "rabun"
+  },
+  "RANDOLPH COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13243",
+   "lookup_key": "randolph county",
+   "lookup_key_short": "randolph"
+  },
+  "RICHMOND COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13245",
+   "lookup_key": "richmond county",
+   "lookup_key_short": "richmond"
+  },
+  "ROCKDALE COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13247",
+   "lookup_key": "rockdale county",
+   "lookup_key_short": "rockdale"
+  },
+  "SCHLEY COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13249",
+   "lookup_key": "schley county",
+   "lookup_key_short": "schley"
+  },
+  "SCREVEN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13251",
+   "lookup_key": "screven county",
+   "lookup_key_short": "screven"
+  },
+  "SEMINOLE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13253",
+   "lookup_key": "seminole county",
+   "lookup_key_short": "seminole"
+  },
+  "SPALDING COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13255",
+   "lookup_key": "spalding county",
+   "lookup_key_short": "spalding"
+  },
+  "STEPHENS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13257",
+   "lookup_key": "stephens county",
+   "lookup_key_short": "stephens"
+  },
+  "STEWART COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13259",
+   "lookup_key": "stewart county",
+   "lookup_key_short": "stewart"
+  },
+  "SUMTER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13261",
+   "lookup_key": "sumter county",
+   "lookup_key_short": "sumter"
+  },
+  "TALBOT COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13263",
+   "lookup_key": "talbot county",
+   "lookup_key_short": "talbot"
+  },
+  "TALIAFERRO COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13265",
+   "lookup_key": "taliaferro county",
+   "lookup_key_short": "taliaferro"
+  },
+  "TATTNALL COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13267",
+   "lookup_key": "tattnall county",
+   "lookup_key_short": "tattnall"
+  },
+  "TAYLOR COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13269",
+   "lookup_key": "taylor county",
+   "lookup_key_short": "taylor"
+  },
+  "TELFAIR COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13271",
+   "lookup_key": "telfair county",
+   "lookup_key_short": "telfair"
+  },
+  "TERRELL COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13273",
+   "lookup_key": "terrell county",
+   "lookup_key_short": "terrell"
+  },
+  "THOMAS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13275",
+   "lookup_key": "thomas county",
+   "lookup_key_short": "thomas"
+  },
+  "TIFT COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13277",
+   "lookup_key": "tift county",
+   "lookup_key_short": "tift"
+  },
+  "TOOMBS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13279",
+   "lookup_key": "toombs county",
+   "lookup_key_short": "toombs"
+  },
+  "TOWNS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13281",
+   "lookup_key": "towns county",
+   "lookup_key_short": "towns"
+  },
+  "TREUTLEN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13283",
+   "lookup_key": "treutlen county",
+   "lookup_key_short": "treutlen"
+  },
+  "TROUP COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13285",
+   "lookup_key": "troup county",
+   "lookup_key_short": "troup"
+  },
+  "TURNER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13287",
+   "lookup_key": "turner county",
+   "lookup_key_short": "turner"
+  },
+  "TWIGGS COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13289",
+   "lookup_key": "twiggs county",
+   "lookup_key_short": "twiggs"
+  },
+  "UNION COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13291",
+   "lookup_key": "union county",
+   "lookup_key_short": "union"
+  },
+  "UPSON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13293",
+   "lookup_key": "upson county",
+   "lookup_key_short": "upson"
+  },
+  "WALKER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13295",
+   "lookup_key": "walker county",
+   "lookup_key_short": "walker"
+  },
+  "WALTON COUNTY": {
+   "1": 718750,
+   "2": 920150,
+   "3": 1112250,
+   "4": 1382250,
+   "fips": "13297",
+   "lookup_key": "walton county",
+   "lookup_key_short": "walton"
+  },
+  "WARE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13299",
+   "lookup_key": "ware county",
+   "lookup_key_short": "ware"
+  },
+  "WARREN COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13301",
+   "lookup_key": "warren county",
+   "lookup_key_short": "warren"
+  },
+  "WASHINGTON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13303",
+   "lookup_key": "washington county",
+   "lookup_key_short": "washington"
+  },
+  "WAYNE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13305",
+   "lookup_key": "wayne county",
+   "lookup_key_short": "wayne"
+  },
+  "WEBSTER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13307",
+   "lookup_key": "webster county",
+   "lookup_key_short": "webster"
+  },
+  "WHEELER COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13309",
+   "lookup_key": "wheeler county",
+   "lookup_key_short": "wheeler"
+  },
+  "WHITE COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13311",
+   "lookup_key": "white county",
+   "lookup_key_short": "white"
+  },
+  "WHITFIELD COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13313",
+   "lookup_key": "whitfield county",
+   "lookup_key_short": "whitfield"
+  },
+  "WILCOX COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13315",
+   "lookup_key": "wilcox county",
+   "lookup_key_short": "wilcox"
+  },
+  "WILKES COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13317",
+   "lookup_key": "wilkes county",
+   "lookup_key_short": "wilkes"
+  },
+  "WILKINSON COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13319",
+   "lookup_key": "wilkinson county",
+   "lookup_key_short": "wilkinson"
+  },
+  "WORTH COUNTY": {
+   "1": 541287,
+   "2": 693050,
+   "3": 837700,
+   "4": 1041125,
+   "fips": "13321",
+   "lookup_key": "worth county",
+   "lookup_key_short": "worth"
+  }
+ },
+ "HI": {
+  "HAWAII COUNTY": {
+   "1": 586500,
+   "2": 750800,
+   "3": 907550,
+   "4": 1127900,
+   "fips": "15001",
+   "lookup_key": "hawaii county",
+   "lookup_key_short": "hawaii"
+  },
+  "HONOLULU COUNTY": {
+   "1": 828000,
+   "2": 1060000,
+   "3": 1281300,
+   "4": 1592350,
+   "fips": "15003",
+   "lookup_key": "honolulu county",
+   "lookup_key_short": "honolulu"
+  },
+  "KALAWAO COUNTY": {
+   "1": 1299500,
+   "2": 1663600,
+   "3": 2010950,
+   "4": 2499100,
+   "fips": "15005",
+   "lookup_key": "kalawao county",
+   "lookup_key_short": "kalawao"
+  },
+  "KAUAI COUNTY": {
+   "1": 1110900,
+   "2": 1422150,
+   "3": 1719050,
+   "4": 2136400,
+   "fips": "15007",
+   "lookup_key": "kauai county",
+   "lookup_key_short": "kauai"
+  },
+  "MAUI COUNTY": {
+   "1": 1299500,
+   "2": 1663600,
+   "3": 2010950,
+   "4": 2499100,
+   "fips": "15009",
+   "lookup_key": "maui county",
+   "lookup_key_short": "maui"
+  }
+ }
+}
