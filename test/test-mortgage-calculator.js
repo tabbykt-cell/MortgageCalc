@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* Regression tests for mortgage-calculator.html
  *
- *   node /home/claude/test-mortgage-calculator.js [path-to-html]
+ *   node test-mortgage-calculator.js [path-to-html]   (defaults to ../index.html)
  *
  * Covers every scenario from the round-1, round-2 and round-3 QA reports — both the findings that
  * were fixed and the behaviours that already passed, so a later change cannot silently undo them.
@@ -32,7 +32,10 @@ function loadPlaywright() {
 }
 const { chromium } = loadPlaywright();
 
-const FILE = 'file://' + path.resolve(process.argv[2] || '/home/claude/mortgage-calculator.html');
+// Everything resolves relative to this file so the suite runs from any checkout.
+const HTML = path.resolve(process.argv[2] || path.join(__dirname, '..', 'index.html'));
+const DATA = path.join(__dirname, '..', 'data');
+const FILE = 'file://' + HTML;
 
 let pass = 0, fail = 0;
 const results = [];
@@ -697,7 +700,7 @@ async function qualSnapshot(page) {
   }
   {
     // every county/unit result matches the official source
-    const fhfa = require('/home/claude/fhfa_limits_2026_full.json');
+    const fhfa = require(path.join(DATA, 'fhfa_limits_2026_full.json'));
     const page = await scenario();
     let bad = 0, tot = 0, sample = [];
     const picks = [['CA','San Diego',2],['CA','Los Angeles',4],['HI','Maui',1],['HI','Kalawao',1],
@@ -979,7 +982,7 @@ async function qualSnapshot(page) {
     // against the source JSON. This cannot pass vacuously: a parse failure throws, and a single
     // mismatched county/unit value fails the check.
     const fs = require('fs');
-    const src = fs.readFileSync(path.resolve(process.argv[2] || '/home/claude/mortgage-calculator.html'), 'utf8');
+    const src = fs.readFileSync(HTML, 'utf8');
     const iC = src.indexOf('const CLL = {'), iF = src.indexOf('const FHA = {');
     const cllSrc = src.slice(iC, src.lastIndexOf('\n};', iF) + 3);
     const fhaSrc = src.slice(iF, src.indexOf('\n};', src.indexOf('counties: {', iF)) + 3);
@@ -987,8 +990,8 @@ async function qualSnapshot(page) {
     // eslint-disable-next-line no-eval
     eval(cllSrc.replace('const CLL', 'mod.CLL') + '\n' + fhaSrc.replace('const FHA', 'mod.FHA'));
     const CLL = mod.CLL, FHAT = mod.FHA;
-    const fhfa = require('/home/claude/fhfa_limits_2026_full.json');
-    const hud  = require('/home/claude/fha_limits_2026_full.json');
+    const fhfa = require(path.join(DATA, 'fhfa_limits_2026_full.json'));
+    const hud  = require(path.join(DATA, 'fha_limits_2026_full.json'));
     const base = fhfa._national.baseline;
     const keyOf = v => v.lookup_key_short;
 
